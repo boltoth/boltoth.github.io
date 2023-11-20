@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FAB 0 Test</title>
+    <link rel="stylesheet" href="./style.css">
+    <style type="text/css">
+      iframe {
+        border: none;
+      }
+
+    </style>
+    <script type="text/javascript">
+     
+       var reader = new FileReader();
+     
+       function readFileName(that){
+          //document.getElementById('Fname').innerHTML= that.files[0].name;
+          document.getElementById('fileToLoad').src = that.files[0].name;
+
+        }
+
+     </script>
+
+     <script>
+         function resizeIframe(iframe){
+            
+            console.log(iframe.id);
+            console.log(iframe.src);
+            var path = iframe.src.split("/");
+            var pathLength = path.length;
+            console.log(path[pathLength-1]);
+            var fileName = path[pathLength-1].split(/[-.]/);
+            console.log(fileName);
+            var flieNameLen = fileName.length;
+            var size = fileName[flieNameLen-2];
+            console.log(size);
+            iframe.height = size;
+           //iframe.style.height = iframe.contentWindow.document.body.scrollHeight;
+       }
+      </script>
+
+      <script type="text/javascript">
+         function setVis(vis){
+           console.log("setVis");
+           
+           var ids = vis.split(".");
+
+           console.log(ids[0]);
+           console.log(ids[1])
+
+           var names = document.getElementsByName(ids[0]);
+           for (var i = 0; i < names.length; i++) {
+             console.log(names[i].id);
+             names[i].style.display = "none";
+           }
+
+           console.log("change Vis");
+           document.getElementById(ids[1]).style.display = "table-row";
+
+           
+         }
+
+      </script>
+   
+  </head>
+  <body>
+    <table style="width:100%">
+      
+      <!-- 
+        Section 1 Openers and Closers
+       -->
+      <tr>
+        <td colspan="2">
+          <input type="button" onclick="setVis('s1.opener-cb')" value="Opener to CB">
+          <input type="button" onclick="setVis('s1.opener-pl')" value="Opener to PL">
+          <input type="button" onclick="setVis('s1.getout-cb')" value="CB Getout">
+          <input type="button" onclick="setVis('s1.getout-pl')" value="PL Getout">  
+        </td>
+      </tr>
+      
+       <tr id="opener-cb" style="display: table-row;" name="s1" >
+        <td style="width:10%" bgcolor="CadetBlue" align="center" > 
+          <h1>Openers</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 300
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="opener-pl" style="display: none;" name="s1" >
+        <td style="width:10%" bgcolor="CadetBlue" align="center" > 
+          <h1>Openers</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 PL-Getins-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 300
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="getout-cb" style="display: none" name="s1">
+        <td style="width:10%" bgcolor="CadetBlue" align="center"  > 
+          <h1>Getouts</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getouts-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 200
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="getout-pl" style="display: none" name="s1">
+        <td style="width:10%" bgcolor="CadetBlue" align="center"  > 
+          <h1>Getouts</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 PL-Getouts-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 200
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <!-- 
+        Section 2 Moving around 
+       -->
+
+      <tr>
+        <td colspan="2">
+          <input type="button" onclick="setVis('s2.cb-cb')" value="CB to CB">
+          <input type="button" onclick="setVis('s2.pl-pl')" value="PL to PL">
+          <input type="button" onclick="setVis('s2.trans')" value="Transition">
+          <input type="button" onclick="setVis('s2.cb-chicken')" value="Chicken">  
+        </td>
+      </tr>
+
+      <tr id="cb-cb"   style="display: table-row;" name="s2">
+        <td style="width:10%" bgcolor="CadetBlue" align="center" > 
+          <h1>CB</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="02 CB-CB-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 600
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="pl-pl" style="display: none" name="s2">
+        <td style="width:10%" bgcolor="CadetBlue" align="center"  > 
+          <h1>PL</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="02 PL-PL-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 200
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="trans" style="display: none" name="s2">
+        <td style="width:10%" bgcolor="CadetBlue" align="center"  > 
+          <h1>Trans</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="02 Trans-300.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 200
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+      <tr id="cb-chicken" style="display: none" name="s2">
+        <td style="width:10%" bgcolor="CadetBlue" align="center"  > 
+          <h1>Chicken</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="02 CB-Chicken-350.html" title=""
+                  scrolling="yes"
+                  width=100%  height= 200
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td>
+      </tr>
+
+         <!--  
+          Section 3 Routines Thems
+         -->
+
+      <tr> 
+      <td colspan="2" style="display: table-row;" name="s3" >
+        <input type="file" onchange="readFileName(this)" accept=".html">
+      </td> 
+      </tr>   
+
+      <tr>
+        <td style="width:10%" bgcolor="CadetBlue" align="center"> 
+          <h1>Figure</h1>
+        </td>
+        <td style="width:100%">
+          <iframe src="Figures-500.html" title="" id="fileToLoad"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+    </table>
+
+  </body>
+</html>

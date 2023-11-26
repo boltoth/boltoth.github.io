@@ -1,1 +1,412 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Call Sheet v1 TAB</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style type="text/css">
+      iframe {
+        border: none;
+      }
+
+      input {
+/*        background: #5E5DF0;*/
+        background: darkgreen;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+      }
+
+       .box_rotate /* didn't work */
+        {
+         -moz-transform: rotate(270deg);  /* FF3.5+ */
+         -o-transform: rotate(270deg);  /* Opera 10.5 */
+         -webkit-transform: rotate(270deg);  /* Saf3.1+, Chrome */
+          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+        }
+
+        h2 {
+           rotate: -90deg;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+     
+       var reader = new FileReader();
+     
+       //
+       //  Function to read file and set up page
+       //
+
+       function readFileName(that){
+
+        let file = that.files[0];
+
+            let reader = new FileReader();
+
+            // hide Input File element
+            //document.getElementById("s0.Input").style.display = "none";
+
+            reader.readAsText(file);
+
+            reader.onload = function() {
+              console.log(reader.result);
+              var lines = reader.result.split(/\n/);
+              console.log(lines.length);
+
+              //
+              // For eaach line in the file set the button name, the input file name (html)
+              // Hide the file selector input
+              // Show the buttons
+              //
+
+              var section1 = false;
+              var section2 = false;
+              var section3 = false;
+              var index    = 0;
+              var sec      = "";
+
+              for (var i = 0; i < lines.length; i++) {
+                console.log(lines[i]);
+
+                tokens = lines[i].split(/;/);
+
+                // Keep Track of which item in each section is being configured
+                console.log("--",tokens[3].trim(),"---", "  Sec: ", sec);
+                if(tokens[3].trim() != sec) {
+                  index = 0;
+                  sec = tokens[3].trim();
+                }
+                else {
+                  index = index + 1;
+                }
+
+
+                console.log("Processing: ", "".concat(tokens[3].trim(),".iframe", index), "i: ", i, "Index: ", index);
+                
+                document.getElementById("".concat(tokens[3].trim(),".iframe", index)).src = tokens[0];
+                document.getElementById("".concat(tokens[3].trim(),".button", index)).value = tokens[1].trim();
+                document.getElementById("".concat(tokens[3].trim(),".button", index)).style.display = "inline-block";
+                document.getElementById("".concat(tokens[3].trim(),".sideTitle", index)).innerHTML = "".concat("<h2>",tokens[2].trim(),"</h2>");
+
+                if(tokens[3].trim() == "s1") section1 = true;
+                if(tokens[3].trim() == "s2") section2 = true;
+                if(tokens[3].trim() == "s3") section3 = true;
+
+
+              }
+
+                //
+                // Display Sections
+                //
+                
+                if (section1) {
+                  document.getElementById("s1.Buttons").style.display = "table-row";
+                  document.getElementById("s1.row0").style.display = "table-row";
+                }
+                if (section2) {
+                  document.getElementById("s2.Buttons").style.display = "table-row";
+                  document.getElementById("s2.row0").style.display = "table-row";
+                }
+                if (section3) {
+                  document.getElementById("s3.Buttons").style.display = "table-row";
+                  document.getElementById("s3.row0").style.display = "table-row";
+                }
+              
+            };
+
+            reader.onerror = function() {
+              console.log(reader.error);
+            };
+
+        }
+
+     </script>
+
+     <script>
+         
+        //
+        // Resize the height based on the height in the file name
+        //   Should have been able to use the scrollHeight but that is not working :(
+        //
+        //.  The height is the last -nnn pattern before the .html in the file name
+        //
+
+         function resizeIframe(iframe){
+            
+            console.log(iframe.id);
+            console.log(iframe.src);
+            var path = iframe.src.split("/");
+            var pathLength = path.length;
+            console.log(path[pathLength-1]);
+            var fileName = path[pathLength-1].split(/[-.]/);
+            console.log(fileName);
+            var flieNameLen = fileName.length;
+            var size = fileName[flieNameLen-2];
+            console.log(size);
+            iframe.height = size;
+           //iframe.style.height = iframe.contentWindow.document.body.scrollHeight;  -- not working
+         }
+      </script>
+
+      <script type="text/javascript">
+
+        //
+        //. Sets the visibility of the <tr> basedon the button selected
+        //
+
+         function setVis(vis){
+           console.log("setVis");
+           
+           var ids = vis.split(".");
+
+           //console.log(ids[0]);
+           //console.log(ids[1]);
+
+           var names = document.getElementsByName(ids[0]);
+           for (var i = 0; i < names.length; i++) {
+             console.log(names[i].id);
+             names[i].style.display = "none";
+           }
+
+           
+           console.log("change Vis");
+           console.log("".concat(vis).trim());
+           document.getElementById("".concat(vis).trim()).style.display = "table-row";
+
+           
+         }
+
+      </script>
+   
+  </head>
+  <body>
+
+    <table style="width:100%">
+      
+      <!--  
+        Section 1 Routines
+      -->
+
+      <tr id="s1.Buttons"  style="display: none;">
+        <td colspan="2">
+          <input type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: none;">
+          <input type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: none;"> 
+          <input type="button" onclick="setVis('s1.row2')" id="s1.button2" style="display: none;">
+          <input type="button" onclick="setVis('s1.row3')" id="s1.button3" style="display: none;">
+        </td>
+      </tr>  
+
+      <tr id="s1.row0" style="display: none" name="s1">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s1.iframe0"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+      <tr id="s1.row1" style="display: none" name="s1">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s1.iframe1"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s1.row2" style="display: none" name="s1">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s1.iframe2"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s1.row3" style="display: none" name="s1">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle3"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s1.iframe3"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+
+      <!--  
+      Section 2 Routines
+      -->
+
+      <tr id="s2.Buttons"  style="display: none;">
+        <td colspan="2">
+          <input type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: none;">
+          <input type="button" onclick="setVis('s2.row1')" id="s2.button1" style="display: none;"> 
+          <input type="button" onclick="setVis('s2.row2')" id="s2.button2" style="display: none;">
+          <input type="button" onclick="setVis('s2.row3')" id="s2.button3" style="display: none;">
+        </td>
+      </tr>  
+
+      <tr id="s2.row0" style="display: none" name="s2">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s2.sideTitle0"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s2.iframe0"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+      <tr id="s2.row1" style="display: none" name="s2">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s2.sideTitle1"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s2.iframe1"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s2.row2" style="display: none" name="s2">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s2.sideTitle2"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s2.iframe2"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s2.row3" style="display: none" name="s2">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s2.sideTitle3"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s2.iframe3"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>  
+
+
+     <!--  
+      Section 3 Routines
+     -->
+
+      <tr id="s3.Buttons"  style="display: none;">
+        <td colspan="2">
+          <input type="button" onclick="setVis('s3.row0')" id="s3.button0" style="display: none;">
+          <input type="button" onclick="setVis('s3.row1')" id="s3.button1" style="display: none;"> 
+          <input type="button" onclick="setVis('s3.row2')" id="s3.button2" style="display: none;">
+          <input type="button" onclick="setVis('s3.row3')" id="s3.button3" style="display: none;">
+        </td>
+      </tr>  
+
+      <tr id="s3.row0" style="display: none" name="s3">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s3.sideTitle0"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s3.iframe0"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+      <tr id="s3.row1" style="display: none" name="s3">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s3.sideTitle1"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s3.iframe1"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s3.row2" style="display: none" name="s3">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s3.sideTitle2"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s3.iframe2"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+       <tr id="s3.row3" style="display: none" name="s3">
+        <td style="width:50px" bgcolor="CadetBlue" align="center" id="s3.sideTitle3"> 
+          <h2>Figure</h2>
+        </td>
+        <td style="width:100%">
+          <iframe src="01 CB-Getins-300.html" title="" id="s3.iframe3"
+                  scrolling="yes"
+                  width=100%  
+                  onLoad="resizeIframe(this)">
+          </iframe>
+        </td> 
+      </tr>
+
+    </table>
+
+    <table style="width:100%">
+       <tr> 
+        <td  style="display: table-row;" id="s0.Input" >
+          <input type="file" onchange="readFileName(this)" accept=".txt">
+        </td> 
+      </tr> 
+    </table>
+
+  </body>
+</html>

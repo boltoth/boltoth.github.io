@@ -24,10 +24,11 @@ td {
 }
 
 p {
-  font-size: 20pt;
+  font-size: 18pt;
   font-family: "Copperplate";
   line-height: 10%;
   white-space: pre; /* Presurve White Space mostly for the leading spaces */
+  /* text-transform: capitalize; */
 }
 
 caption {
@@ -36,5 +37,6 @@ caption {
   font-family: "Copperplate";
   color:navy;
   white-space: pre;
-  background-color:rgb(157, 233, 180);
+  background-color:#DBF0D3;
+  /* text-transform: capitalize; */
 }

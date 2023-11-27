@@ -6,4 +6,4 @@
 02 PL-PL-300.html; Pl to Pl; PL > PL;         s2
 02 Trans-450.html; Trans; Trans;              s2
 02 CB-Chicken-470.html; Chicken; Chicken;     s2
-Figures-600.html; Figure; Figure;             s3
+03 Figures-600.html; Figure; Figure;          s3

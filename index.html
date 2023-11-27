@@ -32,14 +32,14 @@
         border: 0;
       }
 
-       .box_rotate /* didn't work */
-        {
-         -moz-transform: rotate(270deg);  /* FF3.5+ */
-         -o-transform: rotate(270deg);  /* Opera 10.5 */
-         -webkit-transform: rotate(270deg);  /* Saf3.1+, Chrome */
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
-         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
-        }
+       /* .box_rotate /* didn't work */
+        /* { */
+         /* -moz-transform: rotate(270deg);  /* FF3.5+ */
+         /* -o-transform: rotate(270deg);  Opera 10.5 */
+         /* -webkit-transform: rotate(270deg);  Saf3.1+, Chrome */ 
+         /* filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  IE6,IE7 */
+         /* -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; IE8 */
+        /* } */ 
 
         h2 {
            rotate: -90deg;
@@ -85,30 +85,34 @@
 
               for (var i = 0; i < lines.length; i++) {
                 console.log(lines[i]);
+                if (lines[i].includes('#')) {continue;}  // Skip Comments
+                if (lines[i].trim() == "" ) {continue;}  // Skip Blank Lines
+
 
                 tokens = lines[i].split(/;/);
 
                 // Keep Track of which item in each section is being configured
-                console.log("--",tokens[3].trim(),"---", "  Sec: ", sec);
-                if(tokens[3].trim() != sec) {
+                console.log("--",tokens[3].trim().toLowerCase(),"---", "  Sec: ", sec);
+                                
+                if(tokens[3].trim().toLowerCase() != sec) {
                   index = 0;
-                  sec = tokens[3].trim();
+                  sec = tokens[3].trim().toLowerCase();
                 }
                 else {
                   index = index + 1;
                 }
 
 
-                console.log("Processing: ", "".concat(tokens[3].trim(),".iframe", index), "i: ", i, "Index: ", index);
+                console.log("Processing: ", "".concat(tokens[3].trim().toLowerCase(),".iframe", index), "i: ", i, "Index: ", index);
                 
-                document.getElementById("".concat(tokens[3].trim(),".iframe", index)).src = tokens[0];
-                document.getElementById("".concat(tokens[3].trim(),".button", index)).value = tokens[1].trim();
-                document.getElementById("".concat(tokens[3].trim(),".button", index)).style.display = "inline-block";
-                document.getElementById("".concat(tokens[3].trim(),".sideTitle", index)).innerHTML = "".concat("<h2>",tokens[2].trim(),"</h2>");
+                document.getElementById("".concat(tokens[3].trim().toLowerCase(),".iframe", index)).src = tokens[0].trim();
+                document.getElementById("".concat(tokens[3].trim().toLowerCase(),".button", index)).value = tokens[1].trim();
+                document.getElementById("".concat(tokens[3].trim().toLowerCase(),".button", index)).style.display = "inline-block";
+                document.getElementById("".concat(tokens[3].trim().toLowerCase(),".sideTitle", index)).innerHTML = "".concat("<h2>",tokens[2].trim(),"</h2>");
 
-                if(tokens[3].trim() == "s1") section1 = true;
-                if(tokens[3].trim() == "s2") section2 = true;
-                if(tokens[3].trim() == "s3") section3 = true;
+                if(tokens[3].trim().toLowerCase() == "s1") section1 = true;
+                if(tokens[3].trim().toLowerCase() == "s2") section2 = true;
+                if(tokens[3].trim().toLowerCase() == "s3") section3 = true;
 
 
               }

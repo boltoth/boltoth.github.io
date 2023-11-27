@@ -1,0 +1,40 @@
+
+* {box-sizing: border-box;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: bgcolor="#FFFED6";
+}
+
+table {
+border: 5px solid blue;
+border-collapse: collapse;
+text-align: left;
+width:100%;
+
+}
+td {
+  border: 5px solid blue;
+  /* width:100%; */
+  min-width: 250px;
+  vertical-align: text-top;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+p {
+  font-size: 20pt;
+  font-family: "Copperplate";
+  line-height: 10%;
+  white-space: pre; /* Presurve White Space mostly for the leading spaces */
+}
+
+caption {
+  text-align:left;
+  font-size: 20pt;
+  font-family: "Copperplate";
+  color:navy;
+  white-space: pre;
+  background-color:rgb(157, 233, 180);
+}

@@ -1,0 +1,12 @@
+# FILE ; BUTTON NAME ; SIDE BAR ; Section (s1,s2,s3)
+01 MS-CBGetio-General-1-497.html; CB Get IN/OUT; CB IN/OUT;  s1
+01 MS-Chicken-General-1-468.html; CB Chicken   ; CB CHICKEN; s1
+01 MS-Trans-General-1-497.html;   Transition   ; CB <> PL;   s1
+01 MS-PLGetio-General-1-613.html; PL Get IN/OUT; PL IN/OUT;  s1
+02 MS-CBZero-General-1-555.html;  CB Zero;       CB ZERO;    s2
+02 MS-FCZero-General-1-352.html;  Facing Zeros;  Facing Couple Zeros; s2
+02 MS-PLZero-General-1-729.html;  PL Zero;       PL ZERO;    s2
+03 PS-Fig-General-1-800.html;     Figure;        Figure;     s3
+03 MS-Fig-SpinTop-1-787.html;     Spin Top;      Spin The Top; s3
+03 PS-Fig-LoadBoat-1-800.html;    Load the Boat; Load the Boat; s3
+03 PS-Fig-PingPong-1-800.html;    PingPong;      Ping Pong Circulate; s3

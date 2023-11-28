@@ -1,0 +1,9 @@
+01 CB-Getins-300.html; CB Opener; CB Opener;  s1
+01 CB-Getouts-300.html; CB Getout; CB Getout; s1
+01 Trans-450.html; Trans; Trans;              s1
+01 CB-Chicken-470.html; Chicken; Chicken;     s1
+02 CB-CB-300.html; CB to CB; CB > CB;         s2
+03 MS-Fig-SpinChain-1-800.html; Spin Chain; Spin Chain; s3
+03 MS-Fig-SpinTop-SpinChain-1-800.html; Top & Chain; Both; s3
+03 PS-Fig-LoadBoat-1-800.html; LoadBoat; Load the Boat; s3
+03 PS-Fig-PingPong-1-800.html; PingPong; Ping Pong; s3

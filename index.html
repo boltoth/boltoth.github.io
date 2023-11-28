@@ -84,15 +84,23 @@
               var sec      = "";
 
               for (var i = 0; i < lines.length; i++) {
-                console.log(lines[i], "i: ", i, "Index: ", index );
+                console.log("---- Begin Processing ",lines[i]);
+                console.log("i: ", i);
+                console.log("Index: ", index );
+                console.log("sec: ", sec);
                 if (lines[i].includes('#')) {continue;}  // Skip Comments
                 if (lines[i].trim() == "" ) {continue;}  // Skip Blank Lines
 
-
                 tokens = lines[i].split(/;/);
+                console.log("Tokens: ", tokens);
+
+                if(tokens.length != 4) {
+                  console.log("****  This line has a syntax error, token length; ", tokens.length);
+                  break;
+                }
 
                 // Keep Track of which item in each section is being configured
-                console.log("--",tokens[3].trim().toLowerCase(),"---", "  Sec: ", sec);
+                console.log("Token 3 ---",tokens[3].trim().toLowerCase(),"---", "  Sec: ", sec);
                 //console.log("--",tokens[3],"---", "  Sec: ", sec);
                                 
                 if(tokens[3].trim().toLowerCase() != sec) {

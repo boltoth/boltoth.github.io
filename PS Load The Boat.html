@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <table style="width:100%"><h1 class="title">PS Load The Boat</h1>
+
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="MS FCZ">
+<input class="btn" type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: inline-block" value="Transit">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>MS FCZ</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS FCZeros (Facing Couple Zeros)</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Right & Left Thru,<br></p>
+<p>Flutter Wheel,<br></p>
+<p>Pass The Ocean,<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Run,<br></p>
+<p>Bend The Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Swing Thru,<br></p>
+<p>Men Run,<br></p>
+<p>Bend The Line,<br></p>
+<p>Star Thru,<br></p>
+<p>Dosado To An Ocean Wave,<br></p>
+<p>Men Trade,<br></p>
+<p>Right & Left Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Touch ¼<br></p>
+<p>Scoot Back<br></p>
+<p>Scoot Back<br></p>
+<p>Girls Run<br></p>
+<p>Star Thru<br></p>
+<p>Calif Twirl<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>MS Transit</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS Transition</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p>Swing Thru,<br></p>
+<p>[Girls Circulate,<br></p>
+<p>Boys Trade]<br></p>
+<p>Boys Run,<br></p>
+<p>Bend the Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p>Swing thru,<br></p>
+<p>Spin Chain Thru,<br></p>
+<p>Recycle,<br></p>
+<p>Slide Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p style='color: darkgreen' >Swing Thru,<br></p>
+<p style='color: darkgreen' ><u>Ace Dedcey</u><br></p>
+<p style='color: darkgreen' >Boy Run,<br></p>
+<p style='color: darkgreen' >Bend<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p>Touch 1/4,<br></p>
+<p>Circulate,<br></p>
+<p>Boys Run<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p>Spin the Top,<br></p>
+<p style='color: deeppink' >[<u>Spin chain Thru</u><br></p>
+<p>Boy Circ (2)],<br></p>
+<p>Recycle<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p style='color: darkgreen' >Pass Thru<br></p>
+<p style='color: darkgreen' >Wheel and Deal<br></p>
+<p style='color: darkgreen' >DBL Pass Thru<br></p>
+<p style='color: darkgreen' ><u>Track 2</u><br></p>
+<p style='color: darkgreen' >Girls Circ<br></p>
+<p style='color: darkgreen' >Recycle<br></p>
+</td>
+ </tr>
+</table>
+
+<tr id="s2.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="Load Boat">
+</td>
+</tr>
+
+<tr id="s2.row0" style="display: table-row" name="s2">
+<td style="width:50px" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>Load the Boat</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      PS Figures - Load the Boat</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >Teach Load The Boat<br></p>
+<p style='color: orangered' >Loop any number of<br></p>
+<p style='color: orangered' >times before the AL<br></p>
+<p>Heads Lead Right<br></p>
+<p>Circle to a line<br></p>
+<p style='color: deeppink' >Load The Boat,<br></p>
+<p>Star Thru<br></p>
+<p>(LTB,*Thru) any EVEN # of times<br></p>
+<p>AL - RLG<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads SQ4<br></p>
+<p>Star Thru,<br></p>
+<p style='color: deeppink' >Load The Boat,<br></p>
+<p>Dive Thru,<br></p>
+<p>Centers Square Thru 3/4,<br></p>
+<p>AL - RLG<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads Lead Right<br></p>
+<p>Circle To A Line<br></p>
+<p style='color: deeppink' >Load The Boat<br></p>
+<p>Veer Left<br></p>
+<p>Bend The Line<br></p>
+<p style='color: deeppink' >Load The Boat<br></p>
+<p>Veer Left<br></p>
+<p>Bend The Line<br></p>
+<p>Star Thru<br></p>
+<p>Square Thru 3<br></p>
+<p>AL<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads SQ4<br></p>
+<p>Right & Left Thru,<br></p>
+<p>Veer Left,<br></p>
+<p>Couples Circulate,<br></p>
+<p>Chain Down The Line,<br></p>
+<p style='color: deeppink' >Load The Boat,<br></p>
+<p>Pass Thru,<br></p>
+<p>Trade By,<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads Lead Right,<br></p>
+<p>Spin Chain Thru,<br></p>
+<p>Girls Circulate 2,<br></p>
+<p>Spin The Top,<br></p>
+<p style='color: deeppink' >Load The Boat,<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

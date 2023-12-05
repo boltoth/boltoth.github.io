@@ -1,7 +1,0 @@
-01 CB-Getins-300.html; CB Opener; CB Opener;  s1
-01 CB-Getouts-300.html; CB Getout; CB Getout; s1
-01 Trans-450.html; Trans; Trans;              s1
-01 CB-Chicken-470.html; Chicken; Chicken;     s1
-02 CB-CB-300.html; CB to CB; CB > CB;         s2
-02 PL-PL-300.html; Pl to Pl; PL > PL;         s2
-03 Figures-600.html; Figure; Figure;          s3

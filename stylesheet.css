@@ -5,104 +5,74 @@ body {
     background: bgcolor="#FFFED6";
 } */
 
-a {
-  color:lightseagreen;
-  font-size: 18pt;
-  font-family: "Copperplate";
-  white-space: pre; /* Presurve White Space mostly for the leading spaces */
-  /* text-transform: capitalize; */
-}
-
-div.list {
-  text-align: center;
-}
-
-ul {
-  display: inline-block;
-  text-align: left;
-}
-
 table.tip {
-border: 5px solid blue;
-border-collapse: collapse;
-text-align: left;
-width:100%;
-}
-
-table.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-td.tip {
   border: 5px solid blue;
-  /* width:100%; */
-  min-width: 250px;
-  vertical-align: text-top;
-  padding-top: 2px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 5px;
-}
+  border-collapse: collapse;
+  text-align: left;
+  width:100%;
+  
+  }
+  td.tip {
+    border: 5px solid blue;
+    /* width:100%; */
+    min-width: 250px;
+    vertical-align: text-top;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
 
-p {
-  font-size: 18pt;
-  font-family: "Copperplate";
-  line-height: 10%;
-  white-space: pre; /* Presurve White Space mostly for the leading spaces */
-  /* text-transform: capitalize; */
-}
+  .hide{
+    display: none;
 
-caption {
-  text-align:left;
-  font-size: 20pt;
-  font-family: "Copperplate";
-  color:navy;
-  white-space: pre;
-  background-color:#DBF0D3;
-  /* text-transform: capitalize; */
-}
-caption.ctr {
-  text-align:center;
-  background-color:#9ac2de;
-}
-
-h1.title {
-  text-align: center;
-}
-
-h2 {
-  rotate: -90deg;
-  white-space: nowrap;
-}
-
-h3 {
-  text-align: center;
-}
-
-input.btn {
-/*        background: #5E5DF0;*/
-  background: darkgreen;
-  border-radius: 999px;
-  box-shadow: #5E5DF0 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-}
-
-.space {
-  padding-bottom: 3cm;
-}
+  }
+  
+  p {
+    font-size: 18pt;
+    font-family: "Copperplate";
+    line-height: 10%;
+    white-space: pre; /* Presurve White Space mostly for the leading spaces */
+    /* text-transform: capitalize; */
+  }
+  
+  caption {
+    text-align:left;
+    font-size: 20pt;
+    font-family: "Copperplate";
+    color:navy;
+    white-space: pre;
+    background-color:#DBF0D3;
+    /* text-transform: capitalize; */
+  }
+  
+  h1.title {
+    text-align: center;
+  }
+  
+  h2 {
+    rotate: -90deg;
+  }
+  
+  input.btn {
+    /*        background: #5E5DF0;*/
+            background: darkgreen;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+          }

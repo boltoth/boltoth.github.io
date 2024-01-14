@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <table style="width:100%">
+<h1 class="title">SSD W1A Class</h1>
+
+<tr class="hide">
+<td>
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W1A-Moves.txt</li>
+<li>Section 2</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W1A-Class-Notes.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W1A-Class-Notes P2.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W1A-Fig-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W1B-Fig-2.txt</li>
+
+</ul>
+</td>
+</tr>
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="Teach">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>W1A Moves</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 1A Moves</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: blue' >Circle Left / Right<br></p>
+<p style='color: blue' >Foward / Back<br></p>
+<p style='color: blue' >Dodado<br></p>
+</td>
+ <td class="tip" >
+<p style='color: blue' >Promenade<br></p>
+<p style='color: blue' >Allemand Left<br></p>
+<p style='color: blue' >Right Arm Turn<br></p>
+</td>
+ <td class="tip" >
+<p style='color: blue' >Right and Left Grand<br></p>
+<p style='color: blue' >Right and Left Thru<br></p>
+<p style='color: blue' >Swing<br></p>
+</td>
+ </tr>
+</table>
+
+<tr id="s2.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="Week 1A P1">
+<input class="btn" type="button" onclick="setVis('s2.row1')" id="s2.button1" style="display: inline-block" value="Week 1A P2">
+<input class="btn" type="button" onclick="setVis('s2.row2')" id="s2.button2" style="display: inline-block" value="SSD W1 Fig1">
+<input class="btn" type="button" onclick="setVis('s2.row3')" id="s2.button3" style="display: inline-block" value="SSD W1">
+</td>
+</tr>
+
+<tr id="s2.row0" style="display: table-row" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>SSD W1 P1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      SSD W1A Class Notes</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>Welcome<br></p>
+<p><br></p>
+<p>I'm you caller ...<br></p>
+<p><br></p>
+<p>If possiable demo tip<br></p>
+<p><br></p>
+<p>Start from a Circle<br></p>
+<p>   Terms<br></p>
+<p>   Who is your Partner?<br></p>
+<p>   Who is your Corner?<br></p>
+<p>   Where is home?<br></p>
+<p>   Knowing your left and right hand<br></p>
+<p><br></p>
+<p><br></p>
+<p>	Circle Left / Circle Right<br></p>
+<p>	Forward and Back<br></p>
+<p>	Allemande Left<br></p>
+<p>   Dosado (Right Shoulder Rule)<br></p>
+<p><br></p>
+<p>   Prominade<br></p>
+<p>   - right hand on top<br></p>
+<p>   - Skater style<br></p>
+<p>   Turn Partner by the Rt<br></p>
+<p>	Rt Pull by, Lt Pull by<br></p>
+<p><br></p>
+<p>Practice<br></p>
+<p><br></p>
+<p>CIRCLE LEFT<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>Rt PULL BY<br></p>
+<p>Lt PULL BY<br></p>
+<p>RT Turn<br></p>
+<p>Lt PULL BY<br></p>
+<p>Rt PULL BY<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>DOSADO and<br></p>
+<p>PROMENADE<br></p>
+<p><br></p>
+<p>BREAK<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row1" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>SSD W1 P1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      SSD W1A Class Notes</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>Short History<br></p>
+<p>Derived from Northern European Folk Dancing<br></p>
+<p>• 17th Century England: Circle dances<br></p>
+<p>• 17/18th Century France: Quadrilles, Cotillion etc.<br></p>
+<p>• 18/19th Century USA: Appalachian Square Dance<br></p>
+<p>• 1940/50s Modern Square Dancing started<br></p>
+<p>   US Soldiers spread around the world<br></p>
+<p><br></p>
+<p>Make Squares<br></p>
+<p>Who are Heads and Sides?<br></p>
+<p>	Right & Left Grand (but from a square) 5 hands<br></p>
+<p>	Promenade<br></p>
+<p>    -	Inside gilrs, boys<br></p>
+<p>    - Prominade part way<br></p>
+<p>	Swing<br></p>
+<p>   Pass Thru<br></p>
+<p>   Wheel Around<br></p>
+<p>	RLT<br></p>
+<p><br></p>
+<p>Practice<br></p>
+<p>Break<br></p>
+<p><br></p>
+<p>Practice singing call break and figure<br></p>
+<p>Singing call<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row2" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>SSD W1A</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      First Class</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>Turn Corner By The Left,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>4 Ladies Promenade Inside Single File,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>4 Men Promenade Inside Single File,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>All Promenade Home<br></p>
+</td>
+ <td class="tip" >
+<p>Circle Left<br></p>
+<p>AL<br></p>
+<p>Dosaso your Partner<br></p>
+<p><br></p>
+<p>AL<br></p>
+<p>Rt Pull By<br></p>
+<p>Left Pull By<br></p>
+<p><br></p>
+<p>RT arme turn (Turn Thru)<br></p>
+<p><br></p>
+<p>Left Pull By<br></p>
+<p>Rt Pull By<br></p>
+<p><br></p>
+<p>AL<br></p>
+<p>Promenade<br></p>
+</td>
+ <td class="tip" >
+<p>Head Ladies Chain Across,<br></p>
+<p>Sides Promenade 3/4 (Stand Behind The Heads),<br></p>
+<p><br></p>
+<p>Heads Pass Thru,<br></p>
+<p>Allemande Left,<br></p>
+<p><br></p>
+<p>R.L.G.,<br></p>
+<p>Swing And Promenade<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>Heads Forward & Back,<br></p>
+<p>Heads Circle 4 Once Around, Backaway,<br></p>
+<p><br></p>
+<p>Sides Forward & Back,<br></p>
+<p>Sides Circle 4 Once Around, Backaway,<br></p>
+<p><br></p>
+<p>Dosado Corner,<br></p>
+<p>Dosado Partner,<br></p>
+<p>Promenade Corner<br></p>
+</td>
+ <td class="tip" >
+<p>4 ladies chain<br></p>
+<p>chain back<br></p>
+<p>AL<br></p>
+<p>dosado partner<br></p>
+<p>Prom Corner<br></p>
+<p><br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row3" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle3"> 
+<h2>SSD Week 1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      SSD Week 1 Routines</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>ALL JOIN HANDS<br></p>
+<p>CIRCLE LEFT<br></p>
+<p>CIRCLE RIGHT<br></p>
+<p>DROP HANDS GO SINGLE FILE<br></p>
+<p>GIRLS TURN AROUND (u-turn back)<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p>HDS DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>SDS DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>FACE CORNER<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p>CIRCLE LEFT<br></p>
+<p>CIRCLE RIGHT GO SINGLE FILE<br></p>
+<p>LADIES TURN OUT GO THE OTHER WAY<br></p>
+<p>(Backtrack)<br></p>
+<p>WHEN YOU MEET YOUR PARTNER<br></p>
+<p>DOSADO<br></p>
+<p>GENTS PROMENADE INSIDE ONCE AROUND<br></p>
+<p>SWING PARTNER<br></p>
+<p>PROMENADE<br></p>
+<p>HDS SINGLE FILE PROMENADE HALFWAY<br></p>
+<p>(face in) HD LADIES CHAIN<br></p>
+<p>SDS SINGLE FILE PROMENADE HALFWAY<br></p>
+<p>(face in) SD LADIES CHAIN<br></p>
+<p>ALL FOUR LADIES CHAIN<br></p>
+<p>JOIN HANDS CIRCLE LEFT HALFWAY<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>HDS PASS THRU & WHEEL AROUND<br></p>
+<p>SDS PASS THRU & WHEEL AROUND<br></p>
+<p>ALL JOIN HANDS & CIRCLE LEFT<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>BACK TO THE PARTNER<br></p>
+<p>PASS THRU<br></p>
+<p>RIGHT ARM TURN THE NEXT<br></p>
+<p>BACK TO THE PARTNER<br></p>
+<p>WRONG WAY PROMENADE<br></p>
+</td>
+ <td class="tip" >
+<p>HDS CIRCLE UP FOUR HALFWAY ROUND<br></p>
+<p>HDS BACK AWAY<br></p>
+<p>SDS CIRCLE UP FOUR HALFWAY ROUND<br></p>
+<p>SDS BACK AWAY<br></p>
+<p>HDS REVERSE CIRCLE UP FOUR 3/4 ROUND<br></p>
+<p>HDS PASS THRU<br></p>
+<p>MEET THE SIDES<br></p>
+<p>DOSADO<br></p>
+<p>ALL CIRCLE UP FOUR 3/4 ROUND<br></p>
+<p>LINES FORWARD & BACK<br></p>
+<p>DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>FORWARD & BACK<br></p>
+<p>DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>ALL JOIN HANDS<br></p>
+<p>CIRCLE HOME<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>MEN STAR LEFT<br></p>
+<p>AT HOME DOSADO (face in)<br></p>
+<p>GIRLS STAR LEFT<br></p>
+<p>AT HOME SWING<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HD LADIES CHAIN<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p>SD LADIES CHAIN<br></p>
+<p>SDS PROMENADE HALFWAY<br></p>
+<p>FOUR LADIES CHAIN<br></p>
+<p>FORWARD & BACK<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>SWING PARTNER<br></p>
+<p>HOME<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p>SDS PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>HDS STAR RIGHT<br></p>
+<p>FULL TURN TO CORNER<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>ARE YOU HOME<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HD LADIES CHAIN<br></p>
+<p>SDS PROMENADE 3/4<br></p>
+<p>STAND BEHIND THE HEADS<br></p>
+<p>HDS PASS THRU<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>SWING YOUR OWN<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>RIGHT-HAND STAR HALF<br></p>
+<p>BACK OUT AT HOME<br></p>
+<p>SDS PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>RIGHT-HAND STAR HALF<br></p>
+<p>BACK OUT AT HOME<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p>SDS CIRCLE UP FOUR HALFWAY ROUND<br></p>
+<p>BOYS STAR LEFT INSIDE FULL AROUND<br></p>
+<p>STAR PROMENADE<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>ALL FOUR LADIES CHAIN<br></p>
+<p>HDS REVERSE CIRCLE UP FOUR 3/4 ROUND<br></p>
+<p>CENTERS PASS THRU<br></p>
+<p>DOSADO<br></p>
+<p>ALL CIRCLE UP FOUR 3/4 ROUND<br></p>
+<p>DOSADO<br></p>
+<p>ALL JOIN HANDS CIRCLE LEFT<br></p>
+<p>FACE YOUR CURRENT PARTNER<br></p>
+<p>RIGHT ARM TURN<br></p>
+<p>BACK TO NEW CORNER PASS THRU<br></p>
+<p>SWING YOUR ORIGINAL PARTNER<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>HDS STAR RIGHT HALFWAY TO CORNER<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>DOSADO AT HOME<br></p>
+<p>SDS TO THE CENTER<br></p>
+<p>DOSADO<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p>SDS STAR RIGHT HALFWAY TO CORNER<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>SWING YOUR OWN<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>ALL FOUR LADIES CHAIN 3/4<br></p>
+<p>JOIN HANDS AND CIRCLE LEFT<br></p>
+<p>LEFT ARM TURN NEW CORNER FULL AROUND<br></p>
+<p>ON TO THE NEXT GIRL<br></p>
+<p>PASS THRU<br></p>
+<p>SWING YOUR PARTNER<br></p>
+<p>ALLEMANDE LEFT WITH CORNER<br></p>
+<p>WEAVE THE RING<br></p>
+<p>PROMENADE<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>ALL FOUR LADIES CHAIN<br></p>
+<p>CIRCLE LEFT<br></p>
+<p>LEFT ARM TURN NEW CORNER<br></p>
+<p>COME BACK TO NEW PARTNER<br></p>
+<p>PASS THRU and ON TO THE NEXT GIRL<br></p>
+<p>LEFT ARM TURN FULL AROUND<br></p>
+<p>ON TO YOUR PARTNER<br></p>
+<p>PASS THRU<br></p>
+<p>LEFT ARM TURN THE NEXT<br></p>
+<p>BACK TO THE PARTNER<br></p>
+<p>WRONG WAY RIGHT & LEFT GRAND<br></p>
+<p>WRONG WAY PROMENADE HOME<br></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

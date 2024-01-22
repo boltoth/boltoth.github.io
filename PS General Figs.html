@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <table style="width:100%">
+<h1 class="title">PS General Figs</h1>
+
+<tr class="hide">
+<td>
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 PS-Fig-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 PS-Fig-General-2.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 PS-Fig-General-3.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 PS-Fig-General-4.txt</li>
+
+</ul>
+</td>
+</tr>
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="PS Fig">
+<input class="btn" type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: inline-block" value="PS Fig">
+<input class="btn" type="button" onclick="setVis('s1.row2')" id="s1.button2" style="display: inline-block" value="PS Figures 3">
+<input class="btn" type="button" onclick="setVis('s1.row3')" id="s1.button3" style="display: inline-block" value="PS Figures 4">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>PS Fig</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      PS Figure 1</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >Routine – Jet 2<br></p>
+<p>SD    <u>LEFT</u> SQUARE THRU<br></p>
+<p>ALL  <u>LEFT</u> SWING THRU<br></p>
+<p>        COURTESY TURN ---- Tricky. S/B NORMAL LINES<br></p>
+<p><br></p>
+<p>ALL  PASS THRU<br></p>
+<p>        1/2 TAG THE LINE<br></p>
+<p>        SWING THRU<br></p>
+<p>        SWING THRU<br></p>
+<p><br></p>
+<p>GS   RUN<br></p>
+<p>ALL  PASS THE OCEAN<br></p>
+<p>GS   CIRCULATE<br></p>
+<p>BS   TRADE<br></p>
+<p><br></p>
+<p>ALL   SPIN THE TOP<br></p>
+<p>        SINGLE HINGE<br></p>
+<p>        CIRCULATE<br></p>
+<p><br></p>
+<p>BS   RUN<br></p>
+<p>ALL  RLThru<br></p>
+<p>        VEER LEFT<br></p>
+<p>        FERRIS WHEEL<br></p>
+<p><br></p>
+<p>CT    Partner Trade<br></p>
+<p>CT   Face In<br></p>
+<p>ALL   CIRCLE LEFT<br></p>
+<p>        AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >Routine – Jet 3<br></p>
+<p>ALL CIRCLE RIGHT 3/4<br></p>
+<p>        ALLEMANDE LEFT<br></p>
+<p>        ALL 8 SPIN THE TOP<br></p>
+<p>        ALL 8 SPIN THE TOP<br></p>
+<p>        RIGHT+LEFT GRAND<br></p>
+<p>        PROMENADE HOME<br></p>
+<p><br></p>
+<p><br></p>
+<p>HD   SQUARE THRU<br></p>
+<p>SD   1/2 SASHAY<br></p>
+<p><br></p>
+<p>ALL   SWING THRU<br></p>
+<p>BS   RUN<br></p>
+<p>ALL   BEND THE LINE<br></p>
+<p><br></p>
+<p>        FORWARD+BACK<br></p>
+<p>        PASS THRU<br></p>
+<p>        WHEEL AND DEAL<br></p>
+<p><br></p>
+<p>CT   SQUARE THRU 3<br></p>
+<p>ALL   AL - Weave<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >Routine – Jet 4<br></p>
+<p>SD   LEAD RIGHT<br></p>
+<p>ALL   CIRCLE TO A LINE<br></p>
+<p><br></p>
+<p>        FORWARD+BACK<br></p>
+<p>        PASS THE OCEAN<br></p>
+<p>        RELAY THE DEUCEY<br></p>
+<p>        LINEAR CYCLE<br></p>
+<p><br></p>
+<p>END LOAD THE BOAT            ENDS ONLY<br></p>
+<p>CT   TOUCH ¼                 CENTERS<br></p>
+<p><br></p>
+<p>CT   GS RUN<br></p>
+<p>ALL   TOUCH 1/4<br></p>
+<p>     WALK AND DODGE         -- Boys in the middle<br></p>
+<p><br></p>
+<p>BS   TRADE<br></p>
+<p>ALL   CAST OFF 3/4             With the ends cast off<br></p>
+<p><br></p>
+<p>GS   CROSS RUN<br></p>
+<p><br></p>
+<p>GS   GIRLS Do your part of Load the boat<br></p>
+<p>BS   BOYS Face each other<br></p>
+<p><br></p>
+<p>BS   Pass Thru<br></p>
+<p>        TOUCH 1/4<br></p>
+<p>GS   TRADE<br></p>
+<p><br></p>
+<p>ALL   SWING THRU<br></p>
+<p>BS   RUN<br></p>
+<p>GS   SINGLE HINGE<br></p>
+<p><br></p>
+<p>ALL    FLIP THE DIAMOND<br></p>
+<p>        RLG<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>PS Fig</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      PS Figure 2</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >Routine – Mike 2<br></p>
+<p>SIDES PASS THE OCEAN<br></p>
+<p>PING PONG CIRCULATE<br></p>
+<p>EXTEND<br></p>
+<p><br></p>
+<p>GIRLS TRADE<br></p>
+<p>GIRLS RUN<br></p>
+<p><br></p>
+<p>FERRIS WHEEL<br></p>
+<p>CENTERS PASS THRU<br></p>
+<p>TOUCH ¼<br></p>
+<p><br></p>
+<p>SCOOT BACK “SAY HEY”<br></p>
+<p><br></p>
+<p>GIRLS FOLD<br></p>
+<p>DOUBLE PASS THRU<br></p>
+<p>PUT CENTERS IN<br></p>
+<p>CAST OFF ¾<br></p>
+<p><br></p>
+<p>PASS THRU<br></p>
+<p>BOYS <u>CROSS FOLD</u><br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p><br></p>
+<p>CENTERS TRADE<br></p>
+<p>BOYS TRADE<br></p>
+<p>GIRLS TRADE<br></p>
+<p>CENTERS TRADE<br></p>
+<p>BOYS RUN<br></p>
+<p>                                                      ZL<br></p>
+<p>LINES UP TO THE MIDDLE BAK WITH A “HEY, HEY, HEY”<br></p>
+<p><br></p>
+<p>RLT<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AND DEAL<br></p>
+<p><br></p>
+<p>ZOOM<br></p>
+<p>CENTERS RT PULL BY<br></p>
+<p>LEFT PULL BY<br></p>
+<p>RLG<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row2" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>PS Fig 3</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      PS Figures Corner Progression</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>HD PROM 1/2<br></p>
+<p>PASS THE OCEAN<br></p>
+<p>EXTEND<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >EXPLODE THE WAVE<br></p>
+<p style='color: MediumSeaGreen' >CHASE RIGHT<br></p>
+<p>CAST OFF 3/4<br></p>
+<p><br></p>
+<p>BS RUN RIGHT<br></p>
+<p><br></p>
+<p>BEND THE LINE<br></p>
+<p>SQT3<br></p>
+<p>SWING AND PROM<br></p>
+</td>
+ <td class="tip" >
+<p>HD PROM 1/2<br></p>
+<p>STAR THRU<br></p>
+<p><br></p>
+<p>DOUBLE PASS<br></p>
+<p style='color: MediumSeaGreen' >TRACK 2<br></p>
+<p style='color: MediumSeaGreen' >LINEAR CYCLE<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT  (CB)<br></p>
+<p>SWING PROM<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>SD PROM 1/2<br></p>
+<p>PASS THE OCEAN<br></p>
+<p>EXT<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >EXPLODE THE WAVE<br></p>
+<p style='color: MediumSeaGreen' >LEFT CHASE<br></p>
+<p>LEFT HINDGE<br></p>
+<p style='color: MediumSeaGreen' >TRADE THE WAVE<br></p>
+<p>ROLL<br></p>
+<p>DBL PASS THRU<br></p>
+<p><br></p>
+<p>GS SWING THE ONE BEHIND YOU<br></p>
+<p>(its a GS UTURN BACK)<br></p>
+<p><br></p>
+<p>PROM<br></p>
+</td>
+ <td class="tip" >
+<p>SD SQT4<br></p>
+<p><br></p>
+<p>DOSADO<br></p>
+<p>TOUCH 1/4<br></p>
+<p>SQT<br></p>
+<p style='color: MediumSeaGreen' >FOLLOW YOUR NEIGHBOR...<br></p>
+<p style='color: MediumSeaGreen' >AND SPREAD<br></p>
+<p><br></p>
+<p>GS HINDGE<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >CUT THE DIMOND<br></p>
+<p>ROLL<br></p>
+<p>DLB PASS<br></p>
+<p><br></p>
+<p>BS U-TURN<br></p>
+<p><br></p>
+<p>SWING<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: blue' >TEACHING<br></p>
+<p>HD PROM 1/2<br></p>
+<p>STAR THRU<br></p>
+<p><br></p>
+<p>DOUBLE PASS<br></p>
+<p style='color: MediumSeaGreen' >TRACK 2X<br></p>
+<p>LINEAR CYCLE<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT  (CB)<br></p>
+<p><br></p>
+<p style='color: deeppink' >[ LOOP<br></p>
+<p>PASS THRU (2X)<br></p>
+<p style='color: MediumSeaGreen' >TRACK 2X<br></p>
+<p style='color: MediumSeaGreen' >LINEAR CYCLE<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT<br></p>
+<p>]<br></p>
+<p><br></p>
+<p>SWING PROM<br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row3" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle3"> 
+<h2>PS Fig 4</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      PS Figures Patter</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>HD LEAD RIGHT<br></p>
+<p>CIRCLE TO A LINE<br></p>
+<p>FORWARD+BACK<br></p>
+<p>PASS THE OCEAN<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p>GS SINGLE HINGE<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >DIAMOND CIRCULATE<br></p>
+<p style='color: MediumSeaGreen' >FLIP THE DIAMOND<br></p>
+<p><br></p>
+<p>GS TRADE<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >EXPLODE THE WAVE<br></p>
+<p>PARTNER TRADE       (PL)<br></p>
+<p>AND ROLL<br></p>
+<p>RIGHT+LEFT GRAND<br></p>
+</td>
+ <td class="tip" >
+<p>SD PASS THE OCEAN<br></p>
+<p><br></p>
+<p>EXTEND THE TAG<br></p>
+<p style='color: MediumSeaGreen' >RELAY THE DEUCEY<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>COUPLES CIRCULATE<br></p>
+<p>TAG THE LINE<br></p>
+<p><br></p>
+<p>GS TRADE<br></p>
+<p><br></p>
+<p>TOUCH 1/4<br></p>
+<p style='color: MediumSeaGreen' >ACEY DEUCEY<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>CHAIN DOWN THE LINE<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT<br></p>
+<p>SWING THRU<br></p>
+<p>CIRCULATE<br></p>
+<p>RIGHT+LEFT GRAND<br></p>
+</td>
+ <td class="tip" >
+<p>SD PASS THE OCEAN<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >PING PONG CIRCULATE<br></p>
+<p>EXTEND THE TAG<br></p>
+<p style='color: MediumSeaGreen' >LINEAR CYCLE<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT<br></p>
+<p>TOUCH 1/4<br></p>
+<p style='color: MediumSeaGreen' >FOLLOW YOUR NEIGHBOR<br></p>
+<p style='color: MediumSeaGreen' >AND SPREAD<br></p>
+<p style='color: MediumSeaGreen' >RELAY THE DEUCEY<br></p>
+<p style='color: MediumSeaGreen' >EXPLODE THE WAVE<br></p>
+<p style='color: MediumSeaGreen' >CHASE RIGHT<br></p>
+<p>SPLIT CIRCULATE<br></p>
+<p><br></p>
+<p>GS RUN<br></p>
+<p><br></p>
+<p>1/2 SASHAY<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p>PASS THRU<br></p>
+<p>CAST OFF 3/4<br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AND DEAL<br></p>
+<p>CT STAR THRU<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>(PL Fig)<br></p>
+<p>HD TOUCH 1/4<br></p>
+<p>WALK AND DODGE<br></p>
+<p><br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p><br></p>
+<p>BS TRADE<br></p>
+<p>GS FOLD<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >PEEL THE TOP<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p>DIXIE STYLE TO WAVE<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>GS RUN<br></p>
+<p><br></p>
+<p>WHEEL AND DEAL<br></p>
+<p>FLUTTERWHEEL<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p>VEER LEFT<br></p>
+<p>BEND THE LINE<br></p>
+<p>ALLEMANDE LEFT<br></p>
+</td>
+ <td class="tip" >
+<p>SD LEAD RIGHT<br></p>
+<p><br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p style='color: MediumSeaGreen' >FAN THE TOP<br></p>
+<p>SPIN THE TOP<br></p>
+<p>RECYCLE<br></p>
+<p><br></p>
+<p>BS WALK AND DODGE<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >COORDINATE<br></p>
+<p>BEND THE LINE<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p style='color: MediumSeaGreen' >LOAD THE BOAT<br></p>
+<p>STAR THRU<br></p>
+<p>WHEEL AND DEAL<br></p>
+<p><br></p>
+<p>CT SQUARE THRU 3<br></p>
+<p><br></p>
+<p>ALL SWING THRU<br></p>
+<p><br></p>
+<p>BS TRADE<br></p>
+<p>GS TRADE<br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>ALL FERRIS WHEEL<br></p>
+<p><br></p>
+<p>CT PASS THRU<br></p>
+<p><br></p>
+<p>AL<br></p>
+</td>
+ <td class="tip" >
+<p>HD SQUARE THRU<br></p>
+<p><br></p>
+<p>ALL TOUCH 1/4<br></p>
+<p style='color: MediumSeaGreen' >FOLLOW YOUR NEIGHBOR...<br></p>
+<p style='color: MediumSeaGreen' >AND SPREAD<br></p>
+<p style='color: MediumSeaGreen' >ACEY DEUCEY<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>ALL CHAIN DOWN THE LINE<br></p>
+<p>FLUTTERWHEEL<br></p>
+<p>SWEEP 1/4 LEFT<br></p>
+<p>PASS THRU<br></p>
+<p>TRADE BY<br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p><br></p>
+<p>BS TRADE<br></p>
+<p>GS FOLD<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >ALL PEEL THE TOP<br></p>
+<p style='color: MediumSeaGreen' >GRAND SWING THRU<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>ALL WHEEL AND DEAL<br></p>
+<p>STAR THRU<br></p>
+<p>PASS THRU<br></p>
+<p>TRADE BY<br></p>
+<p>TOUCH 1/4<br></p>
+<p>SPLIT CIRCULATE<br></p>
+<p><br></p>
+<p>BS RUN<br></p>
+<p><br></p>
+<p>ALL PASS THRU<br></p>
+<p>WHEEL AND DEAL<br></p>
+<p><br></p>
+<p>CT RIGHT+LEFT THRU<br></p>
+<p>PASS THRU<br></p>
+<p><br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>SD PASS THE OCEAN<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >ALL PING PONG CIRCULATE<br></p>
+<p><br></p>
+<p>CT SWING THRU<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >ALL PING PONG CIRCULATE<br></p>
+<p><br></p>
+<p>CT SWING THRU<br></p>
+<p><br></p>
+<p>ALL EXTEND<br></p>
+<p>SWING THRU<br></p>
+<p><br></p>
+<p>GS RUN<br></p>
+<p><br></p>
+<p>ALL 1/2 TAG THE LINE<br></p>
+<p>WALK AND DODGE<br></p>
+<p>U-TURN BACK<br></p>
+<p>RIGHT+LEFT THRU<br></p>
+<p><br></p>
+<p>DIXIE STYLE TO WAVE<br></p>
+<p style='color: MediumSeaGreen' >TRADE THE WAVE<br></p>
+<p>HINGE<br></p>
+<p>SCOOT BACK<br></p>
+<p>SCOOT BACK<br></p>
+<p><br></p>
+<p>GS U-TURN BACK<br></p>
+<p><br></p>
+<p style='color: MediumSeaGreen' >ALL LOAD THE BOAT<br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p style='color: MediumSeaGreen' >ACEY DEUCEY<br></p>
+<p style='color: MediumSeaGreen' >LINEAR CYCLE<br></p>
+<p>SLIDE THRU<br></p>
+<p><br></p>
+<p>CT LADIES CHAIN ACROSS<br></p>
+<p><br></p>
+<p>ALL CALIFORNIA TWIRL<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

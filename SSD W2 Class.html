@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <table style="width:100%">
+<h1 class="title">SSD W2 Class</h1>
+
+<tr class="hide">
+<td>
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W2-Moves.txt</li>
+<li>Section 2</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W2-Fig-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W2-Fig-2.txt</li>
+
+</ul>
+</td>
+</tr>
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="Teach 2">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>W2 Moves</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 2 Moves</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: blue' >Weave the Ring<br></p>
+<p style='color: blue' >RLT<br></p>
+<p style='color: blue' >Courtesy Turn<br></p>
+</td>
+ <td class="tip" >
+<p style='color: blue' >Pass Thru<br></p>
+<p style='color: blue' >Wheel Around<br></p>
+<p style='color: blue' >Promenade Single File<br></p>
+</td>
+ <td class="tip" >
+<p style='color: blue' >LT Hand Star/ Rt Hand Star<br></p>
+<p style='color: blue' >Ladies Chain<br></p>
+<p style='color: blue' >Star Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: blue' >Half Sashey<br></p>
+<p style='color: blue' >Rollaway<br></p>
+<p style='color: blue' >Ladies in the men Sashey<br></p>
+<p style='color: blue' >Star Thru / Slide Thru<br></p>
+</td>
+ </tr>
+</table>
+
+<tr id="s2.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="SSD W2 Review">
+<input class="btn" type="button" onclick="setVis('s2.row1')" id="s2.button1" style="display: inline-block" value="Week 2 Fig">
+</td>
+</tr>
+
+<tr id="s2.row0" style="display: table-row" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>SSD Week 2</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 2 Review</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>Turn Corner By The Left,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>4 Ladies Promenade Inside Single File,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>4 Men Promenade Inside Single File,<br></p>
+<p>Dosado Partner,<br></p>
+<p><br></p>
+<p>All Promenade Home<br></p>
+</td>
+ <td class="tip" >
+<p>Circle Left<br></p>
+<p>AL<br></p>
+<p>Dosaso your Partner<br></p>
+<p><br></p>
+<p>AL<br></p>
+<p>Rt Pull By<br></p>
+<p>Left Pull By<br></p>
+<p><br></p>
+<p>RT Arme turn (Turn Thru)<br></p>
+<p><br></p>
+<p>Left Pull By<br></p>
+<p>Rt Pull By<br></p>
+<p><br></p>
+<p>AL<br></p>
+<p>Promenade<br></p>
+</td>
+ <td class="tip" >
+<p>Head Ladies Chain Across,<br></p>
+<p>Sides Promenade 3/4 (Stand Behind The Heads),<br></p>
+<p><br></p>
+<p>Heads Pass Thru,<br></p>
+<p>Allemande Left,<br></p>
+<p><br></p>
+<p>R.L.G.,<br></p>
+<p>Swing And Promenade<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>Heads Forward & Back,<br></p>
+<p>Heads Circle 4 Once Around, Backaway,<br></p>
+<p><br></p>
+<p>Sides Forward & Back,<br></p>
+<p>Sides Circle 4 Once Around, Backaway,<br></p>
+<p><br></p>
+<p>Dosado Corner,<br></p>
+<p>Dosado Partner,<br></p>
+<p>Promenade Partner<br></p>
+</td>
+ <td class="tip" >
+<p>4 ladies chain accross<br></p>
+<p>4 ladies chain back<br></p>
+<p>AL<br></p>
+<p>dosado partner<br></p>
+<p>Prom Home<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>MEN STAR LEFT<br></p>
+<p>AT HOME DOSADO (face in)<br></p>
+<p><br></p>
+<p>GIRLS STAR LEFT<br></p>
+<p>SWING YOUR PARTNER<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p><br></p>
+<p>RLG PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HD LADIES CHAIN<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p><br></p>
+<p>SD LADIES CHAIN<br></p>
+<p>SDS PROMENADE HALFWAY<br></p>
+<p><br></p>
+<p>FOUR LADIES CHAIN<br></p>
+<p><br></p>
+<p>FORWARD & BACK<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>SWING PARTNER<br></p>
+<p>PROMENADE<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p><br></p>
+<p>SDS PASS THRU<br></p>
+<p>WHEEL AROUND<br></p>
+<p><br></p>
+<p>HDS STAR RIGHT<br></p>
+<p>FULL TURN TO CORNER<br></p>
+<p><br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG PROMENADE<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HD LADIES CHAIN<br></p>
+<p><br></p>
+<p>SDS PROMENADE 3/4<br></p>
+<p>(STAND BEHIND THE HEADS)<br></p>
+<p><br></p>
+<p>HDS PASS THRU<br></p>
+<p>ALLEMANDE LEFT<br></p>
+<p>RLG<br></p>
+<p>SWING YOUR OWN<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >WEEK 1B<br></p>
+<p>HDS PROMENADE HALFWAY<br></p>
+<p><br></p>
+<p>SDS PROMENADE HALFWAY ROUND<br></p>
+<p><br></p>
+<p>BOYS STAR LEFT INSIDE FULL AROUND<br></p>
+<p style='color: deeppink' >STAR PROMENADE<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row1" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>Figures</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 2 Figures</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p>HDS PROMENADE HALFWAY,<br></p>
+<p>HDS STAR THRU,<br></p>
+<p>PASS THRU,<br></p>
+<p><br></p>
+<p>ALLEMANDE LEFT,<br></p>
+<p>SWING,<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p>FOUR LADIES CHAIN,<br></p>
+<p>JOIN HANDS CIRCLE LEFT,<br></p>
+<p>LADIES IN, MEN SASHAY,<br></p>
+<p>LADIES IN, MEN SASHAY,<br></p>
+<p><br></p>
+<p>ALLEMANDE LEFT,<br></p>
+<p>GRAND RIGHT & LEFT,<br></p>
+<p>SWING YOUR OWN,<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p>HDS RLT,<br></p>
+<p>HDS HALF SASHAY,<br></p>
+<p>HDS STAR THRU,<br></p>
+<p><br></p>
+<p>RIGHT-HAND STAR <u>W/SD</u><br></p>
+<p>GO HALF,<br></p>
+<p>BACK BY THE LEFT A LEFT-HAND STAR<br></p>
+<p>GO HALF,<br></p>
+<p><br></p>
+<p>ALLEMANDE LEFT,<br></p>
+<p style='color: deeppink' >SHOULD BE HOME?<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>HDS DOSADO,<br></p>
+<p>RLT,<br></p>
+<p>HDS STAR THRU,<br></p>
+<p>HDS PASS THRU,<br></p>
+<p><br></p>
+<p>STAR THRU,<br></p>
+<p>RT/LT THRU,<br></p>
+<p>STAR THRU,<br></p>
+<p><br></p>
+<p>ALLEMANDE LEFT,<br></p>
+<p>RLG PPOM<br></p>
+</td>
+ <td class="tip" >
+<p>HDS PROMENADE HALFWAY,<br></p>
+<p>HDS RT/LT THRU,<br></p>
+<p>HD LADIES CHAIN,<br></p>
+<p>HDS STAR THRU,<br></p>
+<p><br></p>
+<p>CT PASS THRU,<br></p>
+<p>CT STAR THRU,<br></p>
+<p><br></p>
+<p>TWO LADIES CHAIN,<br></p>
+<p><br></p>
+<p>STAR THRU,<br></p>
+<p>PASS THRU,<br></p>
+<p><br></p>
+<p>AL, WEAVE,<br></p>
+<p>SWING, PROMENADE HOME<br></p>
+</td>
+ <td class="tip" >
+<p>HDS PROMENADE 3/4,<br></p>
+<p>SDS PASS THRU,<br></p>
+<p>STAR THRU,<br></p>
+<p>LADIES CHAIN,<br></p>
+<p><br></p>
+<p>GO FORWARD & BACK,<br></p>
+<p>JOIN HANDS CIRCLE LEFT,<br></p>
+<p>ALLEMANDE LEFT, RLG,<br></p>
+<p>PROMENADE HOME<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p>HDS ROLLAWAY<br></p>
+<p>STAR THRU,<br></p>
+<p>RLT,<br></p>
+<p><br></p>
+<p>HALF SASHAY, TWICE (SHE GOES, HE GOES),<br></p>
+<p><br></p>
+<p>PASS THRU,<br></p>
+<p>SWING PARTNER, PROM<br></p>
+</td>
+ <td class="tip" >
+<p style='color: deeppink' ><u>CORNER PROGRESSION</u><br></p>
+<p>4 LADIES CHAIN<br></p>
+<p>ROLL AWAY<br></p>
+<p>CIRCLE LT<br></p>
+<p>AL<br></p>
+<p>WEAVE<br></p>
+<p>SW PROM<br></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

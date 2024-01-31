@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+  /* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  font-family: "Copperplate";
+  font-size: 18pt;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 18px;
+  background-color: #FFFED6;
+  border-radius: 10%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #FFFED6;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: green;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: green;
+}
+ 
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <label class="container" style='color: orangered' >SS>CB
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Extend
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">Swing Thru
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">BS Run
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">Couples Circulate
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Wheel And Deal
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Right+Left Thru
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">AL
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <table style="width:100%">
+<h1 class="title">xxx</h1>
+
+<tr class="hide">
+<td>
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/01 MS-CBGetio-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/01 MS-PLGetio-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/01 MS-Chicken-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/01 MS-Trans-General-1.txt</li>
+<li>Section 2</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/02 MS-CBZero-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/02 MS-FCZero-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/02 MS-PLZero-General-1.txt</li>
+<li>Section 3</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 MS-Fig-General-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 MS-Fig-SpinChain-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/03 MS-Fig-SpinTop-1.txt</li>
+
+</ul>
+</td>
+</tr>
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="CB IN/OUT">
+<input class="btn" type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: inline-block" value="PL IN/OUTs">
+<input class="btn" type="button" onclick="setVis('s1.row2')" id="s1.button2" style="display: inline-block" value="Chicken">
+<input class="btn" type="button" onclick="setVis('s1.row3')" id="s1.button3" style="display: inline-block" value="Transit">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>CB IN/OUT</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS CB Get Ins and Outs</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+  <label class="container" style='color: orangered' >SS>CB
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Extend
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">Swing Thru
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  
+  <label class="container">BS Run
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">Couples Circulate
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Wheel And Deal
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Right+Left Thru
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">AL
+    <input type="radio" name="stop">
+    <span class="checkmark"></span>
+  </label>
+
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>Resolve<br></p>
+<p>(Zero Box)<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Run,<br></p>
+<p>Bend The Line,<br></p>
+<p>Right & Left Thru,<br></p>
+<p>Dixie Style To A Wave<br></p>
+<p>Al<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >SS>CB<br></p>
+<p>Heads Rlt<br></p>
+<p>Star Thru<br></p>
+<p>Pass Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>Resolve<br></p>
+<p>Star Thru,<br></p>
+<p>Dixie Style To An Ocean Wave,<br></p>
+<p>Ladies Trade,<br></p>
+<p>Al<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>PL Get IN-OUTS</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS PL GET Ins and Outs</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >SS>Pl<br></p>
+<p>Heads Touch 1/4,<br></p>
+<p>   Walk & Dodge,<br></p>
+<p>Pass The Ocean,<br></p>
+<p>GS Trade<br></p>
+<p>BS Trade<br></p>
+<p>Recycle<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CC>PL<br></p>
+<p>Heads Square Thru 2,<br></p>
+<p>Touch 1/4,<br></p>
+<p>Split Circulate,<br></p>
+<p>Centers Trade,<br></p>
+<p>Spin Chain Thru,<br></p>
+<p>Ends Circulate Twice,<br></p>
+<p>Boys Run<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL>Resolve<br></p>
+<p>Star Thru,<br></p>
+<p>Dive Thru,<br></p>
+<p>Double Pass Thru,<br></p>
+<p>Centers In,<br></p>
+<p>Cast Off 3/4,<br></p>
+<p>Centers Slide Thru<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >PL>Resolve<br></p>
+<p>Touch ¼,<br></p>
+<p>Circ. (Any # Of Times), Boys Run,<br></p>
+<p>AL<br></p>
+<p style='color: orangered' >Pl>Res<br></p>
+<p><u>Ladies Chain</u><br></p>
+<p><u>Sweep 1/4</u><br></p>
+<p>Pass Thru,<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row2" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>Chicken</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS CB Chicken</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>RLT<br></p>
+<p>Pass Thru<br></p>
+<p>Trade By<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>Pass The Ocean<br></p>
+<p>Ladies Trade<br></p>
+<p>Recycle<br></p>
+<p>RLT<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>Star Thru<br></p>
+<p>Pass Thru<br></p>
+<p>Trade By<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Pass Thru<br></p>
+<p>Trade By<br></p>
+<p>RLT<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru<br></p>
+<p>Boy Run<br></p>
+<p>Couples Circ<br></p>
+<p>WD<br></p>
+<p>RLT<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>SQT4<br></p>
+<p>Trade By<br></p>
+<p>RLT<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row3" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle3"> 
+<h2>MS Transit</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS Transition</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p>Swing Thru,<br></p>
+<p>[Girls Circulate,<br></p>
+<p>Boys Trade]<br></p>
+<p>Boys Run,<br></p>
+<p>Bend the Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p>Swing thru,<br></p>
+<p>Spin Chain Thru,<br></p>
+<p>Recycle,<br></p>
+<p>Slide Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>PL<br></p>
+<p style='color: darkgreen' >Swing Thru,<br></p>
+<p style='color: darkgreen' ><u>Ace Dedcey</u><br></p>
+<p style='color: darkgreen' >Boy Run,<br></p>
+<p style='color: darkgreen' >Bend<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p>Touch 1/4,<br></p>
+<p>Circulate,<br></p>
+<p>Boys Run<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p>Spin the Top,<br></p>
+<p style='color: deeppink' >[<u>Spin chain Thru</u><br></p>
+<p>Boy Circ (2)],<br></p>
+<p>Recycle<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL>CB<br></p>
+<p style='color: darkgreen' >Pass Thru<br></p>
+<p style='color: darkgreen' >Wheel and Deal<br></p>
+<p style='color: darkgreen' >DBL Pass Thru<br></p>
+<p style='color: darkgreen' ><u>Track 2</u><br></p>
+<p style='color: darkgreen' >Girls Circ<br></p>
+<p style='color: darkgreen' >Recycle<br></p>
+</td>
+ </tr>
+</table>
+
+<tr id="s2.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="MS CB Zeros">
+<input class="btn" type="button" onclick="setVis('s2.row1')" id="s2.button1" style="display: inline-block" value="MS FCZ">
+<input class="btn" type="button" onclick="setVis('s2.row2')" id="s2.button2" style="display: inline-block" value="MS PL Zeros">
+</td>
+</tr>
+
+<tr id="s2.row0" style="display: table-row" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>MS CB Zeros</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS CB Zeros</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Run,<br></p>
+<p>Couples Circulate,<br></p>
+<p>Wheel & Deal,<br></p>
+<p>Dive Thru,<br></p>
+<p>Centers Pass Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Trade,<br></p>
+<p>Boys Run,<br></p>
+<p>Wheel & Deal,<br></p>
+<p>Right & Left Thru,<br></p>
+<p>Flutter Wheel,<br></p>
+<p>Sweep 1/4 Double (2)<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru,<br></p>
+<p>Men Run,<br></p>
+<p>Couples Circulate,<br></p>
+<p>Ladies Trade,<br></p>
+<p>Bend The Line,<br></p>
+<p>Star Thru,<br></p>
+<p>Dive Thru,<br></p>
+<p>Centers Pass Thru<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>SQT4<br></p>
+<p>Trade By<br></p>
+<p>RLT<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>Pass The Ocean<br></p>
+<p>Ladies Trade<br></p>
+<p>Recycle<br></p>
+<p>RLT<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Slide Thru<br></p>
+<p>Star Thru<br></p>
+<p>Pass Thru<br></p>
+<p>Trade By<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row1" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>MS FCZ</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS FCZeros (Facing Couple Zeros)</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Right & Left Thru,<br></p>
+<p>Flutter Wheel,<br></p>
+<p>Pass The Ocean,<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Run,<br></p>
+<p>Bend The Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Swing Thru,<br></p>
+<p>Men Run,<br></p>
+<p>Bend The Line,<br></p>
+<p>Star Thru,<br></p>
+<p>Dosado To An Ocean Wave,<br></p>
+<p>Men Trade,<br></p>
+<p>Right & Left Thru<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Touch ¼<br></p>
+<p>Scoot Back<br></p>
+<p>Scoot Back<br></p>
+<p>Girls Run<br></p>
+<p>Star Thru<br></p>
+<p>Calif Twirl<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >FCZ<br></p>
+<p>Swing Thru,<br></p>
+<p>Spin The Top,<br></p>
+<p>Right And Left Thru,<br></p>
+<p>Flutter Wheel,<br></p>
+<p>Sweep 1/4<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s2.row2" style="display: none" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>MS PL Zeros</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS PL Zeros</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >PL-PL<br></p>
+<p>(Zero Line)<br></p>
+<p>Ladies Chain,<br></p>
+<p>Star Thru,<br></p>
+<p>Dive Thru,<br></p>
+<p>Centers Pass Thru,<br></p>
+<p>Right & Left Thru,<br></p>
+<p>2 Ladies Chain,<br></p>
+<p>Star Thru<br></p>
+<p>Bend the Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL-PL<br></p>
+<p>Pass Thru,<br></p>
+<p>Men Run,<br></p>
+<p>Swing Thru,<br></p>
+<p>Ends Circulate,<br></p>
+<p>Centers Circulate,<br></p>
+<p>Ends Trade,<br></p>
+<p>Men Run<br></p>
+<p>Beend the Line<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL-PL<br></p>
+<p>Pass Thru,<br></p>
+<p>Wheel & Deal,<br></p>
+<p>Centers Pass Thru,<br></p>
+<p>Spin The Top,<br></p>
+<p>Men Run,<br></p>
+<p>Bend The Line,<br></p>
+<p>Star Thru<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >PL Zero<br></p>
+<p>Pass Thru<br></p>
+<p>Wheel and Deal<br></p>
+<p>DBL Pass Thru<br></p>
+<p style='color: darkgreen' ><u>Track 2</u><br></p>
+<p style='color: darkgreen' ><u>Linear Cycle</u><br></p>
+<p style='color: deeppink' >(repeat)<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL-PL<br></p>
+<p>Dixie Style To An Ocean Wave,<br></p>
+<p>Men Trade,<br></p>
+<p>Men Run,<br></p>
+<p>Bend The Line,<br></p>
+<p>Box The Gnat<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >PL-PL<br></p>
+<p>Pass The Ocean,<br></p>
+<p>Single Hinge,<br></p>
+<p>Centers Trade,<br></p>
+<p>Swing Thru,<br></p>
+<p>Scoot Back,<br></p>
+<p>Boys Run<br></p>
+</td>
+ </tr>
+</table>
+
+<tr id="s3.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s3.row0')" id="s3.button0" style="display: inline-block" value="Fig">
+<input class="btn" type="button" onclick="setVis('s3.row1')" id="s3.button1" style="display: inline-block" value="Spin Chain">
+<input class="btn" type="button" onclick="setVis('s3.row2')" id="s3.button2" style="display: inline-block" value="SpinTop">
+</td>
+</tr>
+
+<tr id="s3.row0" style="display: table-row" name="s3">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>Fig</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS Figures 1</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >ROUTINE – TOM<br></p>
+<p>CIRCLE LEFT<br></p>
+<p>ALAMEDA LEFT<br></p>
+<p>WEAVE THE RING<br></p>
+<p>PROMENADE<br></p>
+<p><br></p>
+<p>HEADS PASS THE OCEAN<br></p>
+<p>HEAD LADIES TRADE<br></p>
+<p>EXTEND<br></p>
+<p><br></p>
+<p>GIRLS TRADE<br></p>
+<p>RECYCLE<br></p>
+<p>VEER LEFT<br></p>
+<p><br></p>
+<p>BOYS CIRCULATE<br></p>
+<p>BEND THE LINE<br></p>
+<p><br></p>
+<p>2 LADIES CHAIN<br></p>
+<p>PASS THE OCEAN<br></p>
+<p><br></p>
+<p>RECYCLE                 [CB]<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >ROUTINE – JET 1<br></p>
+<p>CIRCLE LEFT<br></p>
+<p>ALAMEDA LEFT<br></p>
+<p>WEAVE THE RING<br></p>
+<p>PROMENADE<br></p>
+<p><br></p>
+<p>Heads SQUARE THRU        [CB]<br></p>
+<p><br></p>
+<p>SWING THRU<br></p>
+<p>SPIN THE TOP<br></p>
+<p>SWING THRU<br></p>
+<p>BOYS RUN<br></p>
+<p>WHEEL AND DEAL           [CB]<br></p>
+<p><br></p>
+<p>LINES UP TO THE MIDDLE BAK WITH A “COWBOY YELL”<br></p>
+<p><br></p>
+<p>PASS THRU<br></p>
+<p>WHEEL AND DEAL<br></p>
+<p>CENTERS WHEEL AROUND<br></p>
+<p><br></p>
+<p>TOUCH 1/4<br></p>
+<p>SCOOT BACK<br></p>
+<p>SINGLE HINGE<br></p>
+<p><br></p>
+<p>GIRLS TRADE<br></p>
+<p>SWING THRU<br></p>
+<p>GIRLS CIRCULATE<br></p>
+<p>BOYS CIRCULATE<br></p>
+<p>BOYS RUN<br></p>
+<p>CENTERS CIRCULATE<br></p>
+<p><br></p>
+<p>FERRIS WHEEL<br></p>
+<p>DOUBLE PASS THRU<br></p>
+<p>ZOOM<br></p>
+<p>ENDS TRADE<br></p>
+<p><br></p>
+<p>SGL CIRCLE TO A WAVE<br></p>
+<p>RLG<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s3.row1" style="display: none" name="s3">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>Spin Chain</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS Figure - Spin Chain Thru</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Bow to Partner and Corner<br></p>
+<p>4 Ladies Chain<br></p>
+<p>Circle Left<br></p>
+<p>Allemande Left to Alamo Style<br></p>
+<p style='color: dodgerblue' >" Balance there for a while”<br></p>
+<p><br></p>
+<p>Swing Thru “Rt / Lt”<br></p>
+<p>Turn Thru “with your partner”<br></p>
+<p><br></p>
+<p>Al - RLG<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads Prom 1/2<br></p>
+<p>Heads Pass the Ocean<br></p>
+<p>Extend    [CB]<br></p>
+<p><br></p>
+<p>RLT<br></p>
+<p>Dive Thru<br></p>
+<p>SQT3             [CB]<br></p>
+<p><br></p>
+<p>Swing Thru<br></p>
+<p>Girls Circulate<br></p>
+<p>Boys Trade<br></p>
+<p>Boys run<br></p>
+<p>Bend the line     [CB]<br></p>
+<p><br></p>
+<p>Tough ¼<br></p>
+<p>Circulate<br></p>
+<p>Boys Run          [CB]<br></p>
+<p><br></p>
+<p>AL - RLG<br></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads Prom 1/2<br></p>
+<p>Pass The Ocean<br></p>
+<p>Extend             [CB]<br></p>
+<p><br></p>
+<p>Swing Thru<br></p>
+<p>Boys Run<br></p>
+<p>Ferris Wheel<br></p>
+<p>Pass Thru          [CB]<br></p>
+<p><br></p>
+<p>Right & Left Thru,<br></p>
+<p>Flutter Wheel,<br></p>
+<p>Pass The Ocean,<br></p>
+<p>Swing Thru,<br></p>
+<p>Boys Run,<br></p>
+<p>Bend The Line<br></p>
+<p><br></p>
+<p>Swing Thru<br></p>
+<p>Spin the Top<br></p>
+<p>Slide Thru<br></p>
+<p><br></p>
+<p>AL - Weave<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >Routine<br></p>
+<p>Heads Rlt<br></p>
+<p>Star Thru<br></p>
+<p>Pass Thru              [CB]<br></p>
+<p><br></p>
+<p>Swing Thru<br></p>
+<p>Girls Circulate<br></p>
+<p>Boys Trade<br></p>
+<p>Boys Run<br></p>
+<p>Bend the Line          [Pl]<br></p>
+<p><br></p>
+<p>Spin the Top<br></p>
+<p style='color: deeppink' >Spin Chain Thru<br></p>
+<p>Boys CS Circulate (twice)<br></p>
+<p>Recycle<br></p>
+<p>AL - Weave<br></p>
+</td>
+ </tr>
+</table>
+<tr id="s3.row2" style="display: none" name="s3">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>Spin the Top</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      MS Figure - Spin the Top</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru<br></p>
+<p style='color: deeppink' >Spin The Top<br></p>
+<p>Square Thru<br></p>
+<p><br></p>
+<p>Ct Pass Thru<br></p>
+<p><br></p>
+<p>Put Centers In<br></p>
+<p>Cast Off 3/4<br></p>
+<p>Touch 1/4<br></p>
+<p>Face In<br></p>
+<p>Star Thru<br></p>
+<p><br></p>
+<p>End Wheel Around<br></p>
+<p>Right/Left Thru<br></p>
+<p>Veer Left<br></p>
+<p><br></p>
+<p>Couples Circulate<br></p>
+<p>Cp Trade<br></p>
+<p>Ferris Wheel<br></p>
+<p>Ct Pass Thru<br></p>
+<p style='color: orangered' >[CB]<br></p>
+<p>AL<br></p>
+</td>
+ <td class="tip" >
+<p style='color: orangered' >CB>CB<br></p>
+<p>Swing Thru<br></p>
+<p>Bs Run<br></p>
+<p><br></p>
+<p>Couples Circulate<br></p>
+<p>Wheel And Deal<br></p>
+<p>Swing Thru<br></p>
+<p><br></p>
+<p style='color: deeppink' >Spin The Top<br></p>
+<p style='color: deeppink' >Spin The Top<br></p>
+<p>Swing Thru<br></p>
+<p><br></p>
+<p>Gs Circulate<br></p>
+<p>Bs Circulate<br></p>
+<p>Bs Trade<br></p>
+<p><br></p>
+<p>Recycle<br></p>
+<p style='color: orangered' >[CB]<br></p>
+<p>AL<br></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

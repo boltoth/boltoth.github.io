@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(vis){
+       console.log("setVis");
+       
+       var ids = vis.split(".");
+
+       //console.log(ids[0]);
+       //console.log(ids[1]);
+
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       console.log("change Vis");
+       console.log("".concat(vis).trim());
+       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+  <table style="width:100%">
+<h1 class="title">SSD W4 Class</h1>
+
+<tr class="hide">
+<td>
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W4-Moves.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W4-InOut.txt</li>
+<li>Section 2</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W4-FCZ.txt</li>
+<li>Section 3</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W4-Figs.txt</li>
+
+</ul>
+</td>
+</tr>
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="Teach 4">
+<input class="btn" type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: inline-block" value="SSD W4 InOut">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>W4 Moves</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 4 Moves		</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry " style='color: orangered' >Week 3 Move Review
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >California Twirl
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >Bend The Line
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >U-Turn Back / Backtrack
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >Dive Thru
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >Week 4 New Moves
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >Square thru
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: blue' >Grand Square
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>W4 InOuts</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 4 Getin/Resolves</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry " style='color: orangered' >SS>PL
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Four Ladies Chain 3/4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Head SQT 2,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">SQT 2 (with the outside two),
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Bend The Line
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS>CB
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Heads SQ4
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL>Resolve
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Square Thru 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Everybody U Turn Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Right & Left Grand
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL>Resolve
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL - WEAVE
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL>Resolve
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Centers SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Ends AL,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >CB>Resolve
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 2,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">California Twirl,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Left Allemande
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+</table>
+
+<tr id="s2.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="Week 4 FCZ">
+</td>
+</tr>
+
+<tr id="s2.row0" style="display: table-row" name="s2">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>SSD W4 FCZ</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      SSD Week 4 Facing Zeros</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">California Twirl
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">U-Turn Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">U-Turn Back
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">California Twirl,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Circle Left 3/4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">2 Ladies Chain
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Ladies Chain,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Wheel Around,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Circle Left 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Ladies Chain,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Rollaway,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">U-Turn Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Circle Left 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >FCZ
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">U-Turn Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">U-Turn Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Star Thru
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+</table>
+
+<tr id="s3.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis('s3.row0')" id="s3.button0" style="display: inline-block" value="Week 4 Fig">
+</td>
+</tr>
+
+<tr id="s3.row0" style="display: table-row" name="s3">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>SSD W4 Fig</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      SSD Week 4 Figures</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry ">Four Ladies Chain,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">All Rollaway,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Sides Face Grand Square, 10 Steps,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Heads Square Thru 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">All Square Thru 4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Square Thru 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dive Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Centers Square Thru 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Four Ladies Chain 3/4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Head Half Sashay,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Head Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Everybody Dosado,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Square Thru 3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">AL - Weave the ring
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry ">Heads SQT3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Heads Wheel Around,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Sides SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">California Twirl,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >(look for the corner)
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL - WEAVE
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Heads SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Everybody SQT4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: deeppink' >(We've got lines facing out),
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dance Out & Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry " style='color: deeppink' >SQT4 & On The 4th Hand,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Heads Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT3 ,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dance Out & Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dive Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Centers Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry ">Heads Promenade 3/4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Sides SQ3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dosado,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Wheel Around,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Two Ladies Chain,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Star Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL- WEAVE
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Heads Pass Thru
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Wheel Around,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Heads SQT2,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">ALL SQT4,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">(Lines facing Out) Dance Out & Back,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Bend The Line,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Slide Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">Heads Slide Thru
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">SQT3,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Heads Make A Left-Hand Star
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">with the Sides, turn it One Full Turn,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Outsides California Twirl,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+<label class="callEntry ">Centers Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Dive Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">Centers Pass Thru,
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<label class="callEntry ">AL - RLG
+   <input type="radio" name="stop">
+   <span class="checkmark"></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

@@ -118,7 +118,7 @@ body {
     position: relative;
     font-family: "Copperplate";
     font-size: 20pt;
-    padding-left: 20px;
+    padding-left: 25px;
     margin-bottom: 2px;
     cursor: pointer;
   }
@@ -156,8 +156,29 @@ body {
   /* Create the indicator (the dot/circle - hidden when not checked) */
   .checkmark:after {
     content: "";
-    position: absolute;
+    position: static;
     display: none;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .PL:before {
+    content: "||";
+    position: static;
+    display: block;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .CB:before {
+    content: "[";
+    position: static;
+    display: block;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .LN:before {
+    content: "|";
+    position: static;
+    display: block;
   }
 
   /* Show the indicator (dot/circle) when checked */

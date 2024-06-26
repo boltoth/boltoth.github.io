@@ -51,10 +51,13 @@
 <li>Section 3</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/03 MS CB-PL-1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/00 MS BLANK.txt</li>
+<li>Section 4</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/04 MS-PL-Zero-1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/00 MS BLANK.txt</li>
+<li>Section 5</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/05 MS-PL-CB-1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/00 MS BLANK.txt</li>
+<li>Section 6</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/06 MS-CB-Resolve-1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/06 MS-PL-Resolve-1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Blast Working/06 MS-PL-Resolve-Spin-Chain-1.txt</li>
@@ -801,13 +804,6 @@
  <td colspan="2">
 <input class="btn" type="button" onclick="setVis(this, 's3.row0')" id="s3.button0" style="display: inline-block" value="MS CB > PL">
 <input class="btn" type="button" onclick="setVis(this, 's3.row1')" id="s3.button1" style="display: inline-block" value="BLANK">
-<input class="btn" type="button" onclick="setVis(this, 's3.row2')" id="s3.button2" style="display: inline-block" value="MS PL ZERO">
-<input class="btn" type="button" onclick="setVis(this, 's3.row3')" id="s3.button3" style="display: inline-block" value="BLANK">
-<input class="btn" type="button" onclick="setVis(this, 's3.row4')" id="s3.button4" style="display: inline-block" value="MS PL > CB">
-<input class="btn" type="button" onclick="setVis(this, 's3.row5')" id="s3.button5" style="display: inline-block" value="BLANK">
-<input class="btn" type="button" onclick="setVis(this, 's3.row6')" id="s3.button6" style="display: inline-block" value="MS CB > Resolve">
-<input class="btn" type="button" onclick="setVis(this, 's3.row7')" id="s3.button7" style="display: inline-block" value="MS PL > Resolve">
-<input class="btn" type="button" onclick="setVis(this, 's3.row8')" id="s3.button8" style="display: inline-block" value="MS PL > Resolve Spin Chain">
 </td>
 </tr>
 
@@ -1001,8 +997,16 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row2" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle2"> 
+
+<tr id="s4.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's4.row0')" id="s4.button0" style="display: inline-block" value="MS PL ZERO">
+<input class="btn" type="button" onclick="setVis(this, 's4.row1')" id="s4.button1" style="display: inline-block" value="BLANK">
+</td>
+</tr>
+
+<tr id="s4.row0" style="display: table-row" name="s4">
+<td class="side" bgcolor="CadetBlue" align="center" id=s4.sideTitle0"> 
 <h2>PL ZERO</h2>
  </td> 
  <td style="width:100%"> 
@@ -1179,8 +1183,8 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row3" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle3"> 
+<tr id="s4.row1" style="display: none" name="s4">
+<td class="side" bgcolor="CadetBlue" align="center" id=s4.sideTitle1"> 
 <h2>-</h2>
  </td> 
  <td style="width:100%"> 
@@ -1203,8 +1207,16 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row4" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle4"> 
+
+<tr id="s5.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's5.row0')" id="s5.button0" style="display: inline-block" value="MS PL > CB">
+<input class="btn" type="button" onclick="setVis(this, 's5.row1')" id="s5.button1" style="display: inline-block" value="BLANK">
+</td>
+</tr>
+
+<tr id="s5.row0" style="display: table-row" name="s5">
+<td class="side" bgcolor="CadetBlue" align="center" id=s5.sideTitle0"> 
 <h2>PL > CB</h2>
  </td> 
  <td style="width:100%"> 
@@ -1357,8 +1369,8 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row5" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle5"> 
+<tr id="s5.row1" style="display: none" name="s5">
+<td class="side" bgcolor="CadetBlue" align="center" id=s5.sideTitle1"> 
 <h2>-</h2>
  </td> 
  <td style="width:100%"> 
@@ -1381,8 +1393,17 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row6" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle6"> 
+
+<tr id="s6.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's6.row0')" id="s6.button0" style="display: inline-block" value="MS CB > Resolve">
+<input class="btn" type="button" onclick="setVis(this, 's6.row1')" id="s6.button1" style="display: inline-block" value="MS PL > Resolve">
+<input class="btn" type="button" onclick="setVis(this, 's6.row2')" id="s6.button2" style="display: inline-block" value="MS PL > Resolve Spin Chain">
+</td>
+</tr>
+
+<tr id="s6.row0" style="display: table-row" name="s6">
+<td class="side" bgcolor="CadetBlue" align="center" id=s6.sideTitle0"> 
 <h2>CB > Resolve</h2>
  </td> 
  <td style="width:100%"> 
@@ -1649,8 +1670,8 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row7" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle7"> 
+<tr id="s6.row1" style="display: none" name="s6">
+<td class="side" bgcolor="CadetBlue" align="center" id=s6.sideTitle1"> 
 <h2>PL > Resolve</h2>
  </td> 
  <td style="width:100%"> 
@@ -1828,8 +1849,8 @@
 </td>
  </tr>
 </table>
-<tr id="s3.row8" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle8"> 
+<tr id="s6.row2" style="display: none" name="s6">
+<td class="side" bgcolor="CadetBlue" align="center" id=s6.sideTitle2"> 
 <h2>PL > Resolve</h2>
  </td> 
  <td style="width:100%"> 

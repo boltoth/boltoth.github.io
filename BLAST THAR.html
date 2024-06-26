@@ -10,23 +10,28 @@
     //
     // Sets the visibility of the <tr> basedon the button selected
     //
-     function setVis(vis){
-       console.log("setVis");
-       
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
        var ids = vis.split(".");
 
-       //console.log(ids[0]);
-       //console.log(ids[1]);
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
 
+       // Set all object with id[0] to display none
        var names = document.getElementsByName(ids[0]);
        for (var i = 0; i < names.length; i++) {
          console.log(names[i].id);
          names[i].style.display = "none";
        }
 
-       console.log("change Vis");
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
        console.log("".concat(vis).trim());
-       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
        
      }
   </script>
@@ -50,12 +55,12 @@
 
 <tr id="s1.Buttons"  style="display: table-row;">
  <td colspan="2">
-<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="AL THAR">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="AL THAR">
 </td>
 </tr>
 
 <tr id="s1.row0" style="display: table-row" name="s1">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s1.sideTitle0"> 
 <h2>ALLEMAND THAR</h2>
  </td> 
  <td style="width:100%"> 
@@ -103,7 +108,7 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">   AL+FWD.2 TO <SPAN STYLE="COLOR: DEEPPINK">AL/THAR</SPAN>
+<label class="callEntry ">   AL+RT/LT SWING INTO AN<SPAN STYLE="COLOR: DEEPPINK">AL/THAR</SPAN>
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>

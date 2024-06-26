@@ -10,23 +10,28 @@
     //
     // Sets the visibility of the <tr> basedon the button selected
     //
-     function setVis(vis){
-       console.log("setVis");
-       
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
        var ids = vis.split(".");
 
-       //console.log(ids[0]);
-       //console.log(ids[1]);
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
 
+       // Set all object with id[0] to display none
        var names = document.getElementsByName(ids[0]);
        for (var i = 0; i < names.length; i++) {
          console.log(names[i].id);
          names[i].style.display = "none";
        }
 
-       console.log("change Vis");
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
        console.log("".concat(vis).trim());
-       document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
        
      }
   </script>
@@ -58,13 +63,13 @@
 
 <tr id="s1.Buttons"  style="display: table-row;">
  <td colspan="2">
-<input class="btn" type="button" onclick="setVis('s1.row0')" id="s1.button0" style="display: inline-block" value="PS Trans">
-<input class="btn" type="button" onclick="setVis('s1.row1')" id="s1.button1" style="display: inline-block" value="MS Get IO">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="PS Trans">
+<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="MS Get IO">
 </td>
 </tr>
 
 <tr id="s1.row0" style="display: table-row" name="s1">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s1.sideTitle0"> 
 <h2>Transformations</h2>
  </td> 
  <td style="width:100%"> 
@@ -226,7 +231,7 @@
  </tr>
 </table>
 <tr id="s1.row1" style="display: none" name="s1">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s1.sideTitle1"> 
 <h2>GET IN/OUT</h2>
  </td> 
  <td style="width:100%"> 
@@ -350,14 +355,14 @@
 
 <tr id="s2.Buttons"  style="display: table-row;">
  <td colspan="2">
-<input class="btn" type="button" onclick="setVis('s2.row0')" id="s2.button0" style="display: inline-block" value="MS FCZ 1">
-<input class="btn" type="button" onclick="setVis('s2.row1')" id="s2.button1" style="display: inline-block" value="Walk&D CBZ">
-<input class="btn" type="button" onclick="setVis('s2.row2')" id="s2.button2" style="display: inline-block" value="MS PL Zeros 1">
+<input class="btn" type="button" onclick="setVis(this, 's2.row0')" id="s2.button0" style="display: inline-block" value="MS FCZ 1">
+<input class="btn" type="button" onclick="setVis(this, 's2.row1')" id="s2.button1" style="display: inline-block" value="Walk&D CBZ">
+<input class="btn" type="button" onclick="setVis(this, 's2.row2')" id="s2.button2" style="display: inline-block" value="MS PL Zeros 1">
 </td>
 </tr>
 
 <tr id="s2.row0" style="display: table-row" name="s2">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s2.sideTitle0"> 
 <h2>MS FCZ 1</h2>
  </td> 
  <td style="width:100%"> 
@@ -485,7 +490,7 @@
  </tr>
 </table>
 <tr id="s2.row1" style="display: none" name="s2">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s2.sideTitle1"> 
 <h2>Walk and Dodge</h2>
  </td> 
  <td style="width:100%"> 
@@ -708,7 +713,7 @@
  </tr>
 </table>
 <tr id="s2.row2" style="display: none" name="s2">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s2.sideTitle2"> 
 <h2>MS PL Zeros 1</h2>
  </td> 
  <td style="width:100%"> 
@@ -920,13 +925,13 @@
 
 <tr id="s3.Buttons"  style="display: table-row;">
  <td colspan="2">
-<input class="btn" type="button" onclick="setVis('s3.row0')" id="s3.button0" style="display: inline-block" value="MS FIG S">
-<input class="btn" type="button" onclick="setVis('s3.row1')" id="s3.button1" style="display: inline-block" value="FIGURES L">
+<input class="btn" type="button" onclick="setVis(this, 's3.row0')" id="s3.button0" style="display: inline-block" value="MS FIG S">
+<input class="btn" type="button" onclick="setVis(this, 's3.row1')" id="s3.button1" style="display: inline-block" value="FIGURES L">
 </td>
 </tr>
 
 <tr id="s3.row0" style="display: table-row" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle0"> 
 <h2>FIGURES SHORT</h2>
  </td> 
  <td style="width:100%"> 
@@ -1151,7 +1156,7 @@
  </tr>
 </table>
 <tr id="s3.row1" style="display: none" name="s3">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<td class="side" bgcolor="CadetBlue" align="center" id=s3.sideTitle1"> 
 <h2>FIGURES LONG</h2>
  </td> 
  <td style="width:100%"> 

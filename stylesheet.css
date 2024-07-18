@@ -30,6 +30,13 @@ body {
 
   .hide{
     display: none;
+/*    display: inline-block; */
+
+  }
+
+  .HIDE{
+    display: none;
+/*    display: inline-block; */
 
   }
   

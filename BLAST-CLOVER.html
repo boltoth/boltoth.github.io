@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
+       var ids = vis.split(".");
+
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
+
+       // Set all object with id[0] to display none
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
+       console.log("".concat(vis).trim());
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+ <!-- <table style="width:100%"> --><div class="hide">
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-CLOVER/00 TEST OUT 1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-CLOVER/00 TEST OUT 2.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-CLOVER/00 TEST OUT 3.txt</li>
+
+</ul>
+</div>
+
+<table style="width:100%"
+
+>
+<h1 class="title">BLAST-CLOVER</h1>
+
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="CLOVERLEAF 1">
+<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="CLOVERLEAF 1">
+<input class="btn" type="button" onclick="setVis(this, 's1.row2')" id="s1.button2" style="display: inline-block" value="CLOVERLEAF 1">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>CLOVERLEAF 1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      CLOVERLEAF 1 - Keys: CLOVERLEAF</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 36, INDEX = 15</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >DOPASO - PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CORNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN WALK IN FOR A STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 25, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[REPEAT]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> THAR.TXT - LINE 43, INDEX = 23</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN PARTNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >GS SWING IN MAKE A <SPAN STYLE="COLOR: DEEPPINK">WRONG WAY THAR</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SLIP THE CLUTCH
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 40, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 54, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HALF SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 25, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[REPEAT]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 40, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 54, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HALF SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 74, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PASS TO THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>CLOVERLEAF 1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      CLOVERLEAF 1 - Keys: CLOVERLEAF</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 23, INDEX = 13</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 25, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[REPEAT]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 8, INDEX = 51</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 47, INDEX = 4</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 46, INDEX = 17</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >DOPASO TO ALLEMAND THAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SLIP THE CLITCH
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 40, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 14, INDEX = 52</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' ><U>SPIN CHAIN THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 62, INDEX = 6</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE FILE CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >ALL CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 54, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HALF SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 20, INDEX = 53</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>ACE DEDCEY</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 47, INDEX = 4</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 25, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOUBLE PASS THRY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[REPEAT]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 8, INDEX = 51</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">[GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE]
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 62, INDEX = 6</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE FILE CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >ALL CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 40, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 14, INDEX = 52</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' ><U>SPIN CHAIN THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 47, INDEX = 4</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ZOOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 54, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HALF SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 20, INDEX = 53</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>ACE DEDCEY</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 62, INDEX = 6</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE FILE CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >ALL CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row2" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>CLOVERLEAF 1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      CLOVERLEAF 1 - Keys: CLOVERLEAF</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 36, INDEX = 15</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >DOPASO - PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CORNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN WALK IN FOR A STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 9, INDEX = 45</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >WALK & DODGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 31, INDEX = 55</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SPIN THE TOP
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' ><U>SPIN CHAIN THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS CIRC (2)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 41, INDEX = 16</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PUT THE LADIES CENTER BACK-TO-BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >GET BACK HOME DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 18, INDEX = 46</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS SQUARE THRU 2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SPIN CHAIN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EN CIRCULATE TWICE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 25, INDEX = 54</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 28, INDEX = 47</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS LEAD RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 38, INDEX = 56</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL AND DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DBL PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>TRACK 2</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRC
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 9, INDEX = 45</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >WALK & DODGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 31, INDEX = 55</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SPIN THE TOP
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' ><U>SPIN CHAIN THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS CIRC (2)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 18, INDEX = 46</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS SQUARE THRU 2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: darkorchid' >SPIN CHAIN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EN CIRCULATE TWICE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 25, INDEX = 54</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 34, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-PLGETIO-GENERAL-1.TXT - LINE 28, INDEX = 47</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS LEAD RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 80, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-TRANS-GENERAL-1.TXT - LINE 38, INDEX = 56</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL AND DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DBL PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>TRACK 2</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS CIRC
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> CLOVERLEAF.TXT - LINE 68, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OUTSDS CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EVERYBODY CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

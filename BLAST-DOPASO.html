@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
+       var ids = vis.split(".");
+
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
+
+       // Set all object with id[0] to display none
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
+       console.log("".concat(vis).trim());
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+ <!-- <table style="width:100%"> --><div class="hide">
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-DOPASO/00 OUT 1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-DOPASO/00 OUT 2.txt</li>
+
+</ul>
+</div>
+
+<table style="width:100%"
+
+>
+<h1 class="title">BLAST-DOPASO</h1>
+
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="DOPASO Teach">
+<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="DOPASO MOVES">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>DOPASO Teach</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      DOPASO Teach - Keys: DOPASO</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >DEF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 37, INDEX = 0</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >DOPASO :
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTHER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CORNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER COURTESY TURN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">OR OTHER INSTRUCTIONS
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry "><SPAN STYLE="COLOR: BLUE">WALK AROUND YOUR CORNER :</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- FACE CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- STEP UP RIGHT SHOLDER TO RIGHT SHOLDER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- PIVIOT AROUND YOUR RIGHT SHOLDERS LOOKING AT EACH OTHER IN THE EYES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- TURN 1/2 SO YOU ARE FACING YOUR PARTNER AND STEP AHD
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- DO NOT TURN IN.
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry "><SPAN STYLE="COLOR: BLUE">SEE SAW</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- FACE CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- STEP UP LEFT SHOLDER TO LEFT SHOLDER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- PIVIOT AROUND YOUR LEFT SHOLDERS LOOKING AT EACH OTHER IN THE EYES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- TURN 1/2 SO YOU ARE FACING YOUR CORNER AND STEP AHD
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- DO NOT TURN IN.
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry "><SPAN STYLE="COLOR: BLUE">TRUN THRU</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- FACE CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- DO A RIGHT ARM TURN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- TURN 1/2 SO YOU ARE FACING YOUR PARTNER AND STEP AHD
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">- DO NOT TURN IN.
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">(RT ALLEMAND)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry "><SPAN STYLE="COLOR: BLUE">PRACTICE: </SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS STEP IN AND FACE YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>DOSASO</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">OPUTIDE PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-SQUARE YOUR SET
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >TEACH
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 44, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BACK TO THE CORNER WITH A RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BACK TO THE PARTNER WITH A RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AND COURTESY TURN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>DOPASO MOVES</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      DOPASO MOVES - Keys: DOPASO</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 48, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >FIG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> SSD-W12-FIG.TXT - LINE 79, INDEX = 33</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EXTEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQUARE THRU 2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TRADE BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">DIVE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 52, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >FIG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> SSD-W12-FIG.TXT - LINE 100, INDEX = 34</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD LEAD RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HALF SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">EN CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 57, INDEX = 4</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FOUR LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RIGHT HAND STAR HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >FIG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> SSD-W12-FIG.TXT - LINE 40, INDEX = 31</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD SQUARE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TRADE BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL-RLG BUT..
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ON THE 3RD HAND <U><B>BOX THE GNAT</B></U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WRONG WAY GRAND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">MEET PARTNER SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SHOULD BE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 65, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >DOPASO - PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CORNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN WALK IN FOR A STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >FIG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> SSD-W12-FIG.TXT - LINE 212, INDEX = 40</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EXTEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HALF TAG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SWING THRU <U><B>DOUBLE</B></U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RECYCLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

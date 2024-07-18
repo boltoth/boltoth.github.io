@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
+       var ids = vis.split(".");
+
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
+
+       // Set all object with id[0] to display none
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
+       console.log("".concat(vis).trim());
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+ <!-- <table style="width:100%"> --><div class="hide">
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-WALK-N-DODGE/00 TEST OUT 1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/BLAST-WALK-N-DODGE/00 TEST OUT 2.txt</li>
+
+</ul>
+</div>
+
+<table style="width:100%"
+
+>
+<h1 class="title">BLAST-WALK-N-DODGE</h1>
+
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="WALK N DODGE 1">
+<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="WALK N DODGE 2">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>WALK N DODGE 1</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      WALK N DODGE 1 - Keys: WALK & DODGE</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> THAR.TXT - LINE 29, INDEX = 27</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >AL FWD 2 TO <SPAN STYLE="COLOR: DEEPPINK">AL/THAR</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >SHOOT THE STAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 SSD-CBGETIO-GENERAL-1.TXT - LINE 15, INDEX = 36</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 70, INDEX = 6</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BEND THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TRADE BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 11, INDEX = 0</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL & DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EIGHT CHAIN 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 23, INDEX = 19</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >PARTNER LEFT DOPASO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 SSD-CBGETIO-GENERAL-1.TXT - LINE 6, INDEX = 34</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>PASS THE OCEAN</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>PASS THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 79, INDEX = 7</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 18, INDEX = 1</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU DOUBLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COPLES HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-GENERAL-1.TXT - LINE 23, INDEX = 32</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 90, INDEX = 8</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">REVERSE FLUTTER WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">VEER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SINGLE HINGE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 28, INDEX = 2</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>CT WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CAST OFF 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CHAIN DOWN THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >DIXIE STYLE TO A WAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS CIRCULATE <U>TWICE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-GETIO-GENERAL-FAV-1.TXT - LINE 10, INDEX = 40</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQ2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 99, INDEX = 9</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SCOOT BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-WALKDODGE.TXT - LINE 11, INDEX = 45</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL & DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EIGHT CHAIN 3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row1" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
+<h2>WALK N DODGE 2</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      WALK N DODGE 2 - Keys: WALK & DODGE</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> DOPASO.TXT - LINE 36, INDEX = 21</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WALK AROUND CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >DOPASO - PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CORNER RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN PARTNER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN WALK IN FOR A STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-GETIO-GENERAL-FAV-1.TXT - LINE 6, INDEX = 39</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 36, INDEX = 3</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL & DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CT <U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >OPENER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> THAR.TXT - LINE 35, INDEX = 28</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN ACROSS
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >AL FWD 2 TO <SPAN STYLE="COLOR: DEEPPINK">AL/THAR</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >SHOOT THE STAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 SSD-CBGETIO-GENERAL-1.TXT - LINE 6, INDEX = 34</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>PASS THE OCEAN</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><U>PASS THRU</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 49, INDEX = 4</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>CT WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">END BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">VEER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FERRIS WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 SSD-CBGETIO-GENERAL-1.TXT - LINE 10, INDEX = 35</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQ2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 62, INDEX = 5</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >DIXIE STYLE TO A WAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE <U>TWICE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CHAIN DOWN THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>CT WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EN CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-GETIO-GENERAL-FAV-1.TXT - LINE 14, INDEX = 41</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQ3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-WALKDODGE.TXT - LINE 36, INDEX = 48</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL & DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >CT <U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-GENERAL-1.TXT - LINE 10, INDEX = 30</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THE OCEAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EXTEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL AND DEAL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-WALKDODGE.TXT - LINE 49, INDEX = 49</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>CT WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">END BS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">VEER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">COUPLES CIRCULATE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FERRIS WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TURN THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<p></p>
+<label class="callEntry " style='color: orangered' >SS-CB
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 SSD-CBGETIO-GENERAL-1.TXT - LINE 15, INDEX = 36</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >CB-PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> WALK AND DODGE.TXT - LINE 117, INDEX = 11</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PARTNER TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQT3
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ES CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >PL-RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry "><SPAN CLASS="HIDE" STYLE="FONT-SIZE: 12PX"> 01 MS-CBGETIO-WALKDODGE.TXT - LINE 61, INDEX = 50</SPAN>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >DIXIE STYLE TO A WAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SPLIT CIRCULATE <U>TWICE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CHAIN DOWN THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">TOUCH 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' ><U>CT WALK & DODGE</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">EN CAL TWIRL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL-RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

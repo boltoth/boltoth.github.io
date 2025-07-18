@@ -45,6 +45,9 @@
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Dance Party-Moves 1.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Dance Party-Moves 2.txt</li>
 <li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Dance Party-Moves 3.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/Dance Party-Moves 4.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W2-Fig-1.txt</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/SSD-W2-Fig-2.txt</li>
 
 </ul>
 </div>
@@ -58,8 +61,11 @@
 <tr id="s1.Buttons"  style="display: table-row;">
  <td colspan="2">
 <input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="Begining Circles">
-<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="Sicilian Circle">
-<input class="btn" type="button" onclick="setVis(this, 's1.row2')" id="s1.button2" style="display: inline-block" value="Begining Squares">
+<input class="btn" type="button" onclick="setVis(this, 's1.row1')" id="s1.button1" style="display: inline-block" value="CHAIN / SASHAY">
+<input class="btn" type="button" onclick="setVis(this, 's1.row2')" id="s1.button2" style="display: inline-block" value="RLT / STARS">
+<input class="btn" type="button" onclick="setVis(this, 's1.row3')" id="s1.button3" style="display: inline-block" value="WAVES">
+<input class="btn" type="button" onclick="setVis(this, 's1.row4')" id="s1.button4" style="display: inline-block" value="SSD W2 Review">
+<input class="btn" type="button" onclick="setVis(this, 's1.row5')" id="s1.button5" style="display: inline-block" value="Week 2 Fig">
 </td>
 </tr>
 
@@ -70,7 +76,7 @@
  <td style="width:100%"> 
  <table class="tip"> 
  <tr class="tip">
-<caption>      Dance Party Circle</caption>
+<caption>     	### Dance Party Circle</caption>
 </tr>
  <tr class="tip" >
 <td class="tip" >
@@ -78,37 +84,52 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >CIRCLE LEFT / RIGHT
+<label class="callEntry " style='color: deeppink' >CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >FOWARD / BACK
+<label class="callEntry " style='color: deeppink' >CIRCLE RIGHT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >LEFT ARM TURN (ALAMAND LEFT)
+<label class="callEntry " style='color: deeppink' >SWING AND PROMENADE
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >RIGHT ARM TRUN
+<p></p>
+<label class="callEntry " style='color: deeppink' >AL
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >DODADO
+<label class="callEntry " style='color: deeppink' >RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >LADIES IN MEM SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >SINGLE FILE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >GIRLS U-TURN BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >RIP AND SNORT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 </td>
  <td class="tip" >
-<label class="callEntry ">BOW
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">JOIN HANDS
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">CIRCLE LEFT
+<label class="callEntry ">JOIN HANDS CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -118,11 +139,25 @@
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">YELLOW FWD AND BAK
+<label class="callEntry ">LADIES FORWARD AND BACK
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">GREEN FWD AND BAK
+<label class="callEntry ">MEN FORWARD AND BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HEADS FWD AND BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SIDES FWD AND BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CIRCLE HOME
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -131,28 +166,18 @@
    <span class="checkmark "></span>
 </label>
 </td>
+ </tr>
+ <tr class="tip" >
  <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
 <label class="callEntry ">CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">FWD AND BAK
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
 <p></p>
-<label class="callEntry ">AL
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RT ARM TURN PARTNER
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >BACK TO CORNER
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
 <label class="callEntry ">AL
    <input type="radio" name="stop">
    <span class="checkmark "></span>
@@ -162,6 +187,77 @@
    <span class="checkmark "></span>
 </label>
 <p></p>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL 4 LADIES CIRCLE LEFT 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING WITH YOU OPPOSIT MAN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES IN THE MEN SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES IN THE MEN SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
 <label class="callEntry ">CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
@@ -170,7 +266,31 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">CIRLE LEFT
+<p></p>
+<label class="callEntry ">SINGLE FILE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GIRLS U-TURN BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">DOSADO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING AND PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -183,50 +303,80 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">FACE IN
+<p></p>
+<label class="callEntry ">CIRCLE RIGHT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">CLAP CLAP CLAP
+<label class="callEntry ">SINGLE FILE
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
+<p></p>
+<label class="callEntry ">GIRLS U-TURN BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING AND PROM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
 </td>
  </tr>
  <tr class="tip" >
  <td class="tip" >
-<label class="callEntry " style='color: blue' >TEACH
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >RIGHT PULL BY
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >LEFT PULL BY
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >RIGHT AND LEFT GRAND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >PROMENADE
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-</td>
- <td class="tip" >
 <label class="callEntry ">CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">AL-RLG (ALL THE WAY AROUND)
+<p></p>
+<label class="callEntry ">HEAD JENTS IN AND BACK RIGHT OUT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SIDE LADIES IN AND BACK AGAIN
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">MEET YOUR PARTNER
+<label class="callEntry ">NUM 1 COUPLE IN AND BACK YOU GO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">NUM 2 COUPLE IN BUT DON"T BE SLOW
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">EVERYONE IN WITH A COWBOY YELL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >NUM 1 IN AND RIP AND SNORT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">.....
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">EVERYONE CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -234,78 +384,113 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">LEFT ARM TRUN YOUR PARTNER
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry " style='color: deeppink' >FACE YOUR CORNER
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">DO A RLG BACK THE AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">MEET YOU PARTNER
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">DOSADO
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">FACE IN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">FWD AND BAK
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">CLAP CLAP CLAP
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
 </td>
  <td class="tip" >
-<label class="callEntry ">YELLOW STEP IN CIRCLE RIGHT
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">BACK TO YOUR PARTNER AND BACK OUT
+<label class="callEntry " style='color: deeppink' >USE COTTON EYED JOE
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">GREEN SETP IN CIRCLE LEFT
+<label class="callEntry ">JOIN HANDS AND CIRCLE UP 8,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">BACK TO YOUR PARTNER AND BACK OUT
+<label class="callEntry ">CIRCLE TO THE LEFT AND DON'T BE LATE
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">ALL FWD AND BAK
+<p></p>
+<label class="callEntry ">SWING YOUR PARTNER HIGH AND LOW
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">AL-RLG
+<label class="callEntry ">PROMENADE HOME BUT DON'T BE SLOW
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">DOSADO
+<p></p>
+<label class="callEntry " style='color: blue' >DO 4 TIMES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">PROMENADE
+<label class="callEntry ">	4 LADIES IN TO THE MIDDLE AND BACK TO THE BAR
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">BOW AND THANK
+<p></p>
+<label class="callEntry ">	JENTS GO IN WITH A RIGHT HAND STAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">	NOW BACK WITH A LEFT BUT NOT TOO FAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">	PASS YOUR PARTNER AND TAKE THE NEXT STAR PROMENADE AROUND THAT SET
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">	BOYS SWING OUT AND LADIES SWING IN, THAT'S IS ONE AND 1/2 TURNS MY FRIEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">	NOW BACK RIGHT OUT AND MAKE A RING
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">	AL AND GIVE YOUR GIRL A SWING
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">	JOIN HANDS AND CIRCLE LEFT AGAIN (SOME TIMES REVERSE AND UP AND BACK)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >	COUPLE 1-4 DOWN THE MIDDLE WITH A RIP AND SNORT MY FRIEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">	JOIN UP HAND AND DON'T BUT SHORT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: blue' >REPEAT (4 LADIES IN AND BACK)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL AND DOSODO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL AND SWING THAT GIRL MY FRIEND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry "> NOW PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HTTPS://WWW.YOUTUBE.COM/WATCH?V=JHQS1BOOLVC
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -314,12 +499,12 @@
 </table>
 <tr id="s1.row1" style="display: none" name="s1">
 <td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle1"> 
-<h2>Sicilian Moves</h2>
+<h2>CHAIN / SASHAY</h2>
  </td> 
  <td style="width:100%"> 
  <table class="tip"> 
  <tr class="tip">
-<caption>      Sicilian Circle Moves</caption>
+<caption>      CHAIN / SASHAY</caption>
 </tr>
  <tr class="tip" >
 <td class="tip" >
@@ -327,125 +512,51 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >LT HAND STAR/ RT HAND STAR
+<label class="callEntry " style='color: deeppink' >RH/LT STAR
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >PASS THRU
+<label class="callEntry " style='color: deeppink' >LADIES CHAIN
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-</td>
- <td class="tip" >
-<label class="callEntry ">BOW
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">COUPLES FWD AND BAK
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">YELLOW MAKE A LEFT HAND STAR
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">BACK TO PARTNER...
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">BACK IN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">GREEN MAKE A RIGHT HAND STAR 2X
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">BACK HOME AND BACK IN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">CLAP CLAP CLAP
+<label class="callEntry " style='color: deeppink' >LADIES IN THE MEN SASHAY
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 </td>
  <td class="tip" >
-<label class="callEntry ">FWD AND BAK
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BOYS MAKE A RIGHT HAND STAR
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry " style='color: deeppink' >REMEMBER WHERE YOU ARE HOME
+<label class="callEntry ">BACK TO YOUR CORNER AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DODADO YOUR PARTNER
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">PASS THRU
+<label class="callEntry ">AL
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >(FACING NEW COUPLE)
+<label class="callEntry ">RLG
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">PASS THRU WITH THEM
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">ALL START RIGHT 1 TURN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >YOU ARE HOME
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">CLAP CLAP CLAP
+<label class="callEntry ">PROM
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -453,235 +564,172 @@
  </tr>
  <tr class="tip" >
  <td class="tip" >
-<label class="callEntry " style='color: deeppink' >STAR THRU
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >RIGHT AND LEFT THRU
+<label class="callEntry ">GIRLS MAKE A LEFT HAND STAR
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >YELLOW CHAIN
+<label class="callEntry ">NOW GO BACK BY THE RIGHT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
+<p></p>
+<label class="callEntry ">MEET YOUR PARTNER SWING
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">MEN GO IN AND MAKE A LEFT HAND STAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BACK BY THE RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">FIND YOUR CORNER AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
 </td>
  <td class="tip" >
-<label class="callEntry ">BOW
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">CIRCLE LEFT 1 TIME
+<label class="callEntry ">4 LADIES CHAIN
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">YELLOW CHAIN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RLT
+<label class="callEntry ">CIRCLE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">YELLOW CHAIN
+<label class="callEntry ">LADIES IN MEM SASHAY
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">RLT
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">STAR THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">PASS THRU
+<label class="callEntry ">LADIES IN MEM SASHAY
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry " style='color: deeppink' >FACE THE PERSON NEXT TO YOU
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-</td>
- <td class="tip" >
-<label class="callEntry ">STAR RIGHT 1 TIME
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">BACK BY THE LEFT ONE TIME
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">YELLOW CHAIN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RLT
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">YELLOW CHAIN
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RLT
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">PASS THRU
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry " style='color: deeppink' >[PASS THRU NEW COUPLE
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RLT
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">REPEAT]
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
 </td>
  </tr>
-</table>
-<tr id="s1.row2" style="display: none" name="s1">
-<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
-<h2>BASIC SQ</h2>
- </td> 
- <td style="width:100%"> 
- <table class="tip"> 
- <tr class="tip">
-<caption>      Dance Party Squares</caption>
-</tr>
  <tr class="tip" >
-<td class="tip" >
-<label class="callEntry ">INTO THE MIDDLE
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">HEADS DOSADO,
+<label class="callEntry ">LADIES CHAIN ACROSS
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">RLT
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">SIDES STEP INTO THE MIDDLE
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">SIDES DOSADO,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">RLT
+<label class="callEntry ">LADIES CHAIN 3/4
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">ALL CIRCLE LEFT 1/2,
+<label class="callEntry ">CIRCLE LEFT 1/2
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">DOSADO CORNER,
+<label class="callEntry ">GS. IN / BS. SASHAY
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">PROMENADE PARTNER
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING TO PR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE HOME
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 </td>
  <td class="tip" >
-<label class="callEntry ">HD YELLOW CHAIN,
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">HDS PROMENADE HALFWAY,
+<label class="callEntry ">LADIES CHAIN ACROSS
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">SD YELLOW CHAIN,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">SDS PROMENADE HALFWAY,
+<label class="callEntry ">LADIES CHAIN 3/4
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">ALL THE YELLOWS CHAIN,
+<label class="callEntry ">CIRCLE LEFT 1/2
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">FORWARD & BACK,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">AL-RLG,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-</td>
- <td class="tip" >
-<label class="callEntry ">HDS DOSADO,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">PASS THRU,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND,
+<label class="callEntry ">GS. IN / BS. SASHAY
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">SDS DOSADO,
+<label class="callEntry ">GIRLS FWD/BACK
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">PASS THRU,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND,
+<label class="callEntry ">BOYS FWD/BACK
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">FACE CORNER,
+<label class="callEntry ">CIRCLE RIGHT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">AL-RLG
+<label class="callEntry ">SINGLE FILE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">GIRLS U-TURN BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING AND PROM
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -689,48 +737,22 @@
  </tr>
  <tr class="tip" >
  <td class="tip" >
-<label class="callEntry ">HDS PROMENADE HALFWAY,
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">SDS PASS THRU,
+<label class="callEntry ">HD GIRLS CHAIN,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">WHEEL AROUND,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">HDS STAR RIGHT,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry " style='color: deeppink' >TO YOUR CORNER,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">AL-RLG
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-</td>
- <td class="tip" >
-<label class="callEntry ">HD YELLOW CHAIN,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
 <label class="callEntry ">SDS PROMENADE 3/4
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >STAND BEHIND THE HEADS,
+<label class="callEntry ">STAND BEHIND THE HEADS,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
 <label class="callEntry ">HDS PASS THRU,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
@@ -739,116 +761,119 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
+<p></p>
 </td>
  <td class="tip" >
-<label class="callEntry ">HDS PASS THRU & WHEEL AROUND
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL LADIES CHAIN 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL CIRCLE LEFT 1/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">   GS. IN / BS. SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">   GS. IN / BS. SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">   GS. IN / BS. SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">   ALLEMANDE LEFT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">SDS PASS THRU & WHEEL AROUND
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">ALL JOIN HANDS & CIRCLE LEFT
+<label class="callEntry ">HEAD LADIES CHAIN,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">AL,
+<label class="callEntry ">SIDE LADIES CHAIN,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >FACE YOUR PARTNER
+<label class="callEntry ">ALL FOUR LADIES CHAIN,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">PASS THRU,
+<label class="callEntry ">ALL FOUR LADIES CHAIN 3/4,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">RIGHT ARM TURN THE NEXT
+<label class="callEntry ">ALLEMANDE LEFT NEW CORNER,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">FACE PARTNER LEFT PULL BY
+<label class="callEntry ">SWING NEW PARTNER,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">DOSADO CORNER
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">AL-RLG
+<label class="callEntry ">PROMENADE
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 </td>
  </tr>
+</table>
+<tr id="s1.row2" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle2"> 
+<h2>RLT / STARS</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>       RLT / STARS</caption>
+</tr>
  <tr class="tip" >
- <td class="tip" >
-<label class="callEntry ">HDS DOSADO,
+<td class="tip" >
+<label class="callEntry " style='color: blue' >TEACH
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">PASS THRU,
+<label class="callEntry " style='color: deeppink' >RLT
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">WHEEL AROUND,
+<label class="callEntry " style='color: deeppink' >STAR THRU
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry ">HDS STAR RIGHT
+<label class="callEntry " style='color: deeppink' >PASS THRU
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">HALFWAY TO CORNER,
+<label class="callEntry " style='color: deeppink' >DIVE THRU
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">ALLEMANDE LEFT,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">FACE PARTNER DOSADO AT HOME,
+<label class="callEntry " style='color: deeppink' >WHEEL AROUND
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <p></p>
-<label class="callEntry ">SDS IN TO THE MIDDLE,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">DOSADO,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">PASS THRU,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<label class="callEntry ">WHEEL AROUND,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry " style='color: deeppink' >SDS STAR RIGHT HALFWAY TO CORNER,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">AL-RLG
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
 </td>
  <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
 <label class="callEntry ">HD DOSADO
    <input type="radio" name="stop">
    <span class="checkmark "></span>
@@ -857,6 +882,7 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
+<p></p>
 <label class="callEntry ">STAR THRU
    <input type="radio" name="stop">
    <span class="checkmark "></span>
@@ -878,18 +904,19 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<p></p>
-<label class="callEntry " style='color: deeppink' >REPEAT WITH SIDES
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-</td>
- <td class="tip" >
 <label class="callEntry ">HDS PROMENADE 3/4
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry " style='color: deeppink' >BENIND THE SIDES
+<label class="callEntry ">BENIND THE SIDES
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -902,16 +929,12 @@
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
-<label class="callEntry ">YELLOW CHAIN,
+<p></p>
+<label class="callEntry ">GIRLS CHAIN,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
 <label class="callEntry ">GO FORWARD & BACK,
-   <input type="radio" name="stop">
-   <span class="checkmark "></span>
-</label>
-<p></p>
-<label class="callEntry ">JOIN HANDS CIRCLE LEFT,
    <input type="radio" name="stop">
    <span class="checkmark "></span>
 </label>
@@ -920,6 +943,980 @@
    <span class="checkmark "></span>
 </label>
 <p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD SEPARATE AND STAND BEHIND THE SIDES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">DOUBLE PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT <U>PASS</U> THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD CIRCLE LEFT 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">   PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">DOSADO
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DIVE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CIRCLE LEFT 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RIGHT+LEFT THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT FACE YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALL ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PROMENADE 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RIGHT+LEFT THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PROMENADE 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">WHEEL AROUND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FORWARD+BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row3" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle3"> 
+<h2>WAVES</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>       WAVES</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry " style='color: blue' >TEACH
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >STEP TO A WAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >BOYS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >FERRIS WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >VEER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD PROM 1/2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD <U>PASS</U> THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STEP TO A WAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">BOYS RUN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FERRIS WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL- RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD <U>PASS</U> THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RT/LEFT THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">VEER LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">FERRIS WHEEL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RT/LEFT THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL/RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<p></p>
+</td>
+ </tr>
+</table>
+<tr id="s1.row4" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle4"> 
+<h2>SSD Week 2</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 2 Review</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry ">TURN CORNER BY THE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO PARTNER,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">4 LADIES PROMENADE INSIDE SINGLE FILE,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO PARTNER,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">4 MEN PROMENADE INSIDE SINGLE FILE,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO PARTNER,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALL PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">CIRCLE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSASO YOUR PARTNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LEFT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RT ARME TURN (TURN THRU)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">LEFT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RT PULL BY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">HEAD LADIES CHAIN ACROSS,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SIDES PROMENADE 3/4 (STAND BEHIND THE HEADS),
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HEADS PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">R.L.G.,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING AND PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry ">HEADS FORWARD & BACK,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HEADS CIRCLE 4 ONCE AROUND, BACKAWAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SIDES FORWARD & BACK,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SIDES CIRCLE 4 ONCE AROUND, BACKAWAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">DOSADO CORNER,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO PARTNER,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE PARTNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">4 LADIES CHAIN ACCROSS
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">DOSADO PARTNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROM HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >WEEK 1B
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">MEN STAR LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AT HOME DOSADO (FACE IN)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">GIRLS STAR LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING YOUR PARTNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RLG PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >WEEK 1B
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS PROMENADE HALFWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SD LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SDS PROMENADE HALFWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">FOUR LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">FORWARD & BACK
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING PARTNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >WEEK 1B
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS PROMENADE HALFWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SDS PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WHEEL AROUND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HDS STAR RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FULL TURN TO CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >WEEK 1B
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SDS PROMENADE 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">(STAND BEHIND THE HEADS)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HDS PASS THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING YOUR OWN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >WEEK 1B
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS PROMENADE HALFWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SDS PROMENADE HALFWAY ROUND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">BOYS STAR LEFT INSIDE FULL AROUND
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >STAR PROMENADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+</table>
+<tr id="s1.row5" style="display: none" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle5"> 
+<h2>Figures</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Week 2 Figures</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry ">HDS PROMENADE HALFWAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">FOUR LADIES CHAIN,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">JOIN HANDS CIRCLE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES IN, MEN SASHAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES IN, MEN SASHAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GRAND RIGHT & LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING YOUR OWN,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">HDS RLT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS HALF SASHAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">RIGHT-HAND STAR <U>W/SD</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GO HALF,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">BACK BY THE LEFT A LEFT-HAND STAR
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">GO HALF,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >SHOULD BE HOME?
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry ">HDS DOSADO,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RT/LT THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">ALLEMANDE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLG PPOM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">HDS PROMENADE HALFWAY,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS RT/LT THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD LADIES CHAIN,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HDS STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">TWO LADIES CHAIN,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">AL, WEAVE,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING, PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry ">HDS PROMENADE 3/4,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SDS PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LADIES CHAIN,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">GO FORWARD & BACK,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">JOIN HANDS CIRCLE LEFT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ALLEMANDE LEFT, RLG,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">PROMENADE HOME
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry ">HDS ROLLAWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">STAR THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RLT,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">HALF SASHAY, TWICE (SHE GOES, HE GOES),
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">PASS THRU,
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SWING PARTNER, PROM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: deeppink' ><U>CORNER PROGRESSION</U>
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">4 LADIES CHAIN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">ROLL AWAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCLE LT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">WEAVE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SW PROM
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
 </td>
  </tr>
 </table>

@@ -29,14 +29,8 @@ body {
   }
 
   .hide{
-    display: none;
-/*    display: inline-block; */
-
-  }
-
-  .HIDE{
-    display: none;
-/*    display: inline-block; */
+     display: inline-block; 
+/*    display: none;*/
 
   }
   
@@ -78,6 +72,7 @@ body {
 
   div.list {
     text-align: center;
+    vertical-align: top;
   }
 
   ul {

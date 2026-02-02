@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+       
+  </style>
+  <script type="text/javascript">
+    //
+    // Sets the visibility of the <tr> basedon the button selected
+    //
+     function setVis(obj, vis){
+       console.log("setVis " .concat(obj.value));
+
+       var ids = vis.split(".");
+
+       //console.log(obj.value)
+       console.log(ids[0]);
+       console.log(ids[1]);
+
+       // Set all object with id[0] to display none
+       var names = document.getElementsByName(ids[0]);
+       for (var i = 0; i < names.length; i++) {
+         console.log(names[i].id);
+         names[i].style.display = "none";
+       }
+
+       // Set just the one object with id[0] to display
+       console.log("change Vis of |".concat(obj.value).trim().concat("|"));
+       console.log("".concat(vis).trim());
+       if ("".concat(obj.value).trim() != "BLANK") {
+         document.getElementById("".concat(vis).trim()).style.display = "table-row";
+       }
+       
+     }
+  </script>
+</head>
+
+<body bgcolor="#FFFED6">
+
+ <!-- <table style="width:100%"> --><div class="hide">
+<ul>
+<li>Section 1</li>
+<li>/Users/boltothm1/Projects/Git-CueGenerator/Routines/99 PS-Pair-Off-1.txt</li>
+
+</ul>
+</div>
+
+<table style="width:100%"
+
+>
+<h1 class="title">Pair Off</h1>
+
+
+<tr id="s1.Buttons"  style="display: table-row;">
+ <td colspan="2">
+<input class="btn" type="button" onclick="setVis(this, 's1.row0')" id="s1.button0" style="display: inline-block" value="PS Pair Off">
+</td>
+</tr>
+
+<tr id="s1.row0" style="display: table-row" name="s1">
+<td class="side" bgcolor="CadetBlue" align="center" id="s1.sideTitle0"> 
+<h2>Pair Off</h2>
+ </td> 
+ <td style="width:100%"> 
+ <table class="tip"> 
+ <tr class="tip">
+<caption>      Pair Off</caption>
+</tr>
+ <tr class="tip" >
+<td class="tip" >
+<label class="callEntry " style='color: orangered' >TEACH
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >NOTES:  (EASY TEACH)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >HDS/SIDES FACE YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: deeppink' >THIS IS CONSISTANT WITH THE FLAG POLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >DEFINITION BUT IGNORS THE FULL CONCEPT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS > RES
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD STEP IN AND FACE YOUR CORNER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">AL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SQUARE YOUR SET
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<label class="callEntry " style='color: deeppink' >NOTES: (FULL TEACH)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >IMAGIAN A FLAG POLE IN THE CENTER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >OF THE SQUARE. STEP IN AND PLACE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >YOUR BACK TO THAT FLAG POLE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: orangered' >SS > PL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">HD LEAD RIGHT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CIRCLE TO A LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: mediumseagreen' >PAIR OFF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: deeppink' >ALL SHOULD BE LOOKING OUT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CAST OFF 3/4
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL > PL        KIP GARVEY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >PAIR OFF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >CLOVERLEAF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL > PL        KIP GARVEY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >PAIR OFF & ROLL
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">TAG THE LINE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">FACE IN
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RL-THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL > PL        KIP GARVEY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >PAIR OFF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">LEADS CLOVER
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT TRADE
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT SQUARE THRU 2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">CT 1/2 SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">STAR THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<p></p>
+</td>
+ </tr>
+ <tr class="tip" >
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL > PL        KIP GARVEY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >EN LOAD THE BOAT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT 1/2 SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >CT PAIR OFF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">RL-THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<p></p>
+</td>
+ <td class="tip" >
+<label class="callEntry " style='color: orangered' >PL > PL        KIP GARVEY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: mediumseagreen' >EN LOAD THE BOAT
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry ">CT RL-THRU (GS TURNS BS)
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">1/2 SASHAY
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+<label class="callEntry " style='color: mediumseagreen' >PAIR OFF
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry " style='color: royalblue' >EIGHT CHAIN 2
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<label class="callEntry ">SLIDE THRU
+   <input type="radio" name="stop">
+   <span class="checkmark "></span>
+</label>
+<p></p>
+</td>
+ </tr>
+</table>
+
+</body>
+ </html>
+

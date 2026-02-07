@@ -28,7 +28,13 @@ body {
     margin-right: auto;
   }
 
-  .hide{
+  .hide {
+     /* display: inline-block;  */
+    display: none;
+
+  }
+
+  .HIDE {
      /* display: inline-block;  */
     display: none;
 

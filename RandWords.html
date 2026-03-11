@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Word Picker</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+#results {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+}
+</style>
+
+<script>
+function getWordsFromEditor() {
+    let text = document.getElementById("wordlist").value;
+    return text.split(/\s+/).filter(w => w.length > 0);
+}
+
+function pickRandomWords() {
+
+    let words = getWordsFromEditor();
+
+    if (words.length < 5) {
+        alert("Need at least 5 words in the list.");
+        return;
+    }
+
+    let pool = [...words];   // copy list
+    let result = [];
+
+    for (let i = 0; i < 5; i++) {
+        let index = Math.floor(Math.random() * pool.length);
+        result.push(pool[index]);
+        pool.splice(index,1);   // remove so it can't repeat
+    }
+
+    document.getElementById("results").innerHTML =
+        result.join("<br>");
+}
+
+window.onload = function() {
+    pickRandomWords();
+};
+</script>
+
+</head>
+
+<body>
+
+<h2>Random Word Picker</h2>
+
+<div id="results"></div>
+
+<button onclick="pickRandomWords()">New Random Words</button>
+
+<h3>Word List (editable)</h3>
+<p>Separate words with spaces or line breaks.</p>
+
+<textarea id="wordlist">
+apple
+banana
+orange
+grape
+melon
+kiwi
+pear
+plum
+peach
+mango
+cherry
+</textarea>
+
+</body>
+</html>

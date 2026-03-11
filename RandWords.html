@@ -45,7 +45,7 @@ function pickRandomWords() {
     let pool = [...words];   // copy list
     let result = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
         let index = Math.floor(Math.random() * pool.length);
         result.push(pool[index]);
         pool.splice(index,1);   // remove so it can't repeat
@@ -74,18 +74,52 @@ window.onload = function() {
 <p>Separate words with spaces or line breaks.</p>
 
 <textarea id="wordlist">
-apple
-banana
-orange
-grape
-melon
-kiwi
-pear
-plum
-peach
-mango
-cherry
+ACEY-DEUCEY
+ALL-8-SPIN-TOP
+CHASE-RIGHT
+CHASE-LEFT
+COORDINATE
+CROSSFIRE
+CUT-THE-DIAMOND
+DIAMOND-CIRCULATE
+DIXIE-GRAND
+EXPLODE-&
+EXPLODE-THE-WAVE
+FAN-THE-TOP
+FLIP-THE-DIAMOND
+FOLLOW-YOUR-NEIGHBOR
+GRAND-SWING-THRU
+LINEAR-CYCLE
+LOAD-THE-BOAT
+PAIR-OFF
+PEEL-OFF
+PEEL-THE-TOP
+PING-PONG-CIRCULATE
+QUARTER-THRU
+RELAY-THE-DEUCEY
+ROLL
+SINGLE-CIRCLE-TO-WAVE
+SPIN-CHAIN-&-EXCHANGE
+SPIN-CHAIN-&-EXCHANGE
+SPIN-CHAIN-THE-GEARS
+SPREAD
+TEA-CUP-CHAIN
+TRACK-2
+TRADE-THE-WAVE
+TRIPLE-SCOOT
+TRIPLE-TRADE
 </textarea>
 
 </body>
+<!-- Make a web page using Java script program that takes 5 items from a list of words at random without using the same word twice.
+Display the words on the web page window.  Add a buttom to produce a new random list.
+Display the list of words on the web page at the bottom and allow it to be edited. -->
+
+<!-- Below is a complete single-file web page (HTML + JavaScript) that does exactly what you asked:
+    - Selects 5 random words
+    - No duplicates
+    - Displays them on the page
+    - Has a button to generate a new set
+    - Shows the full word list at the bottom
+    - The list is editable, and changes affect the next random selection -->
 </html>

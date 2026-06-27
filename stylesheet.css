@@ -74,6 +74,10 @@ body {
 
   h3 {
     text-align: center;
+    color:lightseagreen;
+    font-size: 18pt;
+    font-family: "Copperplate";
+    white-space: pre
   }
 
   div.list {

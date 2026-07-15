@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOM'S SQUARE DANCE SYSTEM</title>
+    <style>
+        /* LCARS Color Palette Constants */
+        :root {
+            --lcars-night-cloud: #344470;
+            --lcars-night-rain: #455580;
+            --lcars-alpha-blue: #5588ee;
+            --lcars-beta-blue: #7799dd;
+            --lcars-arctic-blue: #66ccff;
+            --lcars-arctic-snow: #7799dd;
+            
+            --lcars-orange: #ff9900;
+            --lcars-purple: #cc99cc;
+            --lcars-blue: #99ccff;
+            --lcars-gold: #ffcc66;
+            --lcars-red: #cc0033;
+            --lcars-dark-blue: #3366cc;
+            --lcars-bg: #000000;
+            --lcars-bg: #c7c6a4;
+            --lcars-db-bg: #000000;
+            --lcars-db-bg: #c7c6a4;
+            --lcars-db-border: #515150;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--lcars-bg);
+            color: #ffffff;
+            font-family: "Arial Black", "Arial", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        a {
+            color:lightseagreen;
+            font-size: 18pt;
+            font-family: "Copperplate";
+            white-space: pre;
+        }
+        ul {
+            display: inline-block;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        /* Top LCARS Header Bar */
+        .lcars-header {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .lcars-bar-left {
+            background-color: var(--lcars-purple);
+            width: 150px;
+            height: 40px;
+            /* border-radius: 20px 0 0 0; */
+            border-radius: 0px 0 0 0;
+            margin-right: 15px;
+        }
+
+        .lcars-title {
+            font-size: 24px;
+            color: var(--lcars-orange);
+            font-weight: 900;
+            padding-right: 20px;
+            white-space: nowrap;
+        }
+
+        .lcars-bar-right {
+            background-color: var(--lcars-blue);
+            flex-grow: 1;
+            height: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Main Grid Wrapper */
+        .lcars-container {
+            display: flex;
+            gap: 20px;
+            min-height: calc(100vh - 100px);
+        }
+
+        /* Left Side Control Panel Column */
+        .lcars-left-menu {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        /* The signature LCARS rounded elbow corner element */
+        .lcars-elbow {
+            background-color: var(--lcars-purple);
+            height: 60px;
+            border-radius: 0 0 0 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .lcars-elbow::after {
+            content: "";
+            /* position: absolute;
+            background-color: var(--lcars-bg);
+            top: 20px;
+            left: 20px;
+            width: 130px;
+            height: 40px;
+            border-radius: 0 0 0 20px; */
+        }
+
+        /* Menu Pills */
+        .lcars-btn {
+            background-color: var(--lcars-blue);
+            color: #000000;
+            border: none;
+            padding: 12px 15px;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: right;
+            border-radius: 0;
+            cursor: pointer;
+            transition: opacity 0.1s;
+        }
+
+        .lcars-btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-one { background-color: var(--lcars-night-cloud); }
+        .btn-two { background-color: var(--lcars-night-rain); }
+        .btn-three { background-color: var(--lcars-alpha-blue); }
+        .btn-four { background-color: var(--lcars-beta-blue); }
+
+        .lcars-indicator-bar {
+            background-color: var(--lcars-dark-blue);
+            flex-grow: 1;
+            width: 150px;
+            min-height: 100px;
+        }
+
+        /* Right Side Data Display Area */
+        .lcars-main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Content Rows */
+        .lcars-section {
+            border-left: 10px solid var(--lcars-night-cloud);
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .lcars-section.plus { border-left-color: var(--lcars-rain); }
+        .lcars-section.advanced { border-left-color: var(--lcars-alpha-blue); }
+
+        .section-header {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title {
+            font-weight: 900;
+        }
+
+        .mainstream .header-title { color: var(--lcars-night-cloud); }
+        .plus .header-title { color: var(--lcars-night-rain); }
+        .advanced .header-title { color: var(--lcars-alpha-blue); }
+
+        .header-line {
+            flex-grow: 1;
+            height: 3px;
+            background-color: currentColor;
+            opacity: 0.5;
+        }
+
+        /* Inner Technical Grid Data */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            font-family: "Courier New", Courier, monospace;
+            text-transform: none; /* Keeps tech logs normal case for readability */
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .data-box {
+            background-color: var(--lcars-db-bg);
+            border: 1px solid var(--lcars-db-border);
+            padding: 15px;
+            border-top: 3px solid var(--lcars-dark-blue);
+        }
+
+        .data-box h4 {
+            color: #ffffff;
+            font-family: "Arial", sans-serif;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .status-active { color: #00ff00; font-weight: bold; }
+        .status-standby { color: var(--lcars-one); font-weight: bold; }
+
+        /* Responsive Breakdown */
+        @media (max-width: 768px) {
+            .lcars-container {
+                flex-direction: column;
+            }
+            .lcars-left-menu {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .lcars-elbow, .lcars-indicator-bar {
+                display: none;
+            }
+            .lcars-btn {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        function toggleDiv(a) {
+            var x = document.getElementById(a);
+            toggleDivOffAll();
+            
+            if (x.style.display === "none") {
+                x.style.display = "grid";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function toggleDivOff(a) {
+            var x = document.getElementById(a);
+            x.style.display = "none";
+        }
+
+        function toggleDivOffAll() {            
+            toggleDivOff('favList');
+            toggleDivOff('ssdList');
+            toggleDivOff('plusList');
+            toggleDivOff('blastList');
+        }
+    </script>
+</head>
+<body>
+    <!-- Start up script-->
+    <script>
+        // This functions as your "on start up" routine
+        document.addEventListener("DOMContentLoaded", () => {
+            toggleDivOffAll();
+        });
+    </script>
+
+    <!-- Top Navigation Bar -->
+    <header class="lcars-header">
+        <div class="lcars-bar-left"></div>
+        <div class="lcars-title">SQAURE DANCING</div>
+        <div class="lcars-bar-right"></div>
+    </header>
+
+    <div class="lcars-container">
+        
+        <!-- Left Side Control Column -->
+        <aside class="lcars-left-menu">
+            <div class="lcars-elbow"></div>
+            <!-- <button class="lcars-btn btn-two" onclick="document.getElementById('ssd').scrollIntoView({behavior: 'smooth'});">01-SSD</button> -->
+            <button class="lcars-btn btn-one" onclick="toggleDiv('favList')">FAV</button>
+            <button class="lcars-btn btn-two" onclick="toggleDiv('ssdList')">SSD/MS</button>
+            <button class="lcars-btn btn-three" onclick="toggleDiv('plusList')">PLUS</button>
+            <button class="lcars-btn btn-four" onclick="toggleDiv('blastList')">BLAST</button>
+            <div class="lcars-indicator-bar"></div>
+        </aside>
+
+        <!-- Right Side Data Matrix -->
+        <main class="lcars-main-content">
+
+            <!-- FAV -->
+            <section class="lcars-section mainstream" id="section1">
+                <div class="section-header">
+                    <span class="header-title">FAVORITES</span>
+                    <div class="header-line"></div>
+                </div>
+                <div hidden class="data-grid" id="favList" >
+                    <div class="data-box" style="border-top-color: var(--lcars-two);">
+                        <h4>List Items</h4>
+                        <ul>
+                        
+                        <li><a href="Singing.html">Singing Calls</a></li>
+                        </br>
+                        <li><a href="OPEN-ROUTINE.html">OPENERS</a></li>
+                        <li><a href="DB SSD DANCES.html">SSD DANCES</a></li>
+                        <li><a href="DB MS DANCES.html">MS DANCES</a></li>
+                    </br>    
+                        <li><a href="DB PLUS DANCES-1.html">PLUS DANCES 1</a></li>
+                        <li><a href="DB PLUS DANCES-2.html">PLUS DANCES 2</a></li>
+                        <li><a href="DB PLUS DANCES-3.html">PLUS DANCES 3</a></li>
+                        <li><a href="PLUS MODULES.html">PLUS MODULES</a></li>
+                        
+                    </br>
+                    </br>
+                        <li><a href="DB SCOTT-1.html">SCOTT CLASS RESOLVES</a></li>    
+                        <li><a href="CALLER CLASS-1.html">CALLER 1</a></li>
+                        <li><a href="CALLER CLASS-2.html">CALLER 2</a></li>
+                    </br>
+                    </br>
+                        <li><a href="SIX COUPLES.html">SIX COUPLES DANCE</a></li>
+                        <li><a href="20251020 Test Figs.html">TOMS NEW FIGS</a></li>
+                        <li><a href="Resolves.html">SIGHT RESOLVES</a></li>
+                        <li><a href="DB CB-CB-LIST.html">CORNER BOXS</a></li>
+                        <li><a href="DB MODULES.html">MODULES</a></li>
+                        <li><a href="CB GETINS.html">CB GETINS </a></li>
+                    </br>
+                        <li><a href="Dance Party.html">DANCE PARTY</a></li>
+                        <li><a href="RandCalls.html">CALL GENERATOR</a></li>
+                    </ul>
+                    </div>
+                    <!-- <div class="data-box">
+                        <h4>Matrix Status</h4>
+                        <p>Core Temperature: <span class="status-active">Nominal</span><br>Sector Allocation: Dynamic</p>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- SSD / MAINSTREAM PANEL -->
+            <section class="lcars-section plus" id="section2">
+                <div class="section-header">
+                    <span class="header-title">SSD // MAINSTREAN 2026</span>
+                    <div class="header-line"></div>
+                </div>
+                <div hidden class="data-grid" id="ssdList">
+                    <div class="data-box" style="border-top-color: var(--lcars-blue);">
+                        <ul>
+                        <li><a href="SSD Intro.html">SSD Intro Session</a></li>
+                        <li><a href="SSD W1A Class.html">SSD Week 1 Class</a></li>
+                        <li><a href="SSD W2 Class.html">SSD Week 2 Class</a></li>
+                        <li><a href="SSD W3 Class.html">SSD Week 3 Class</a></li>
+                        <li><a href="SSD W4 Class.html">SSD Week 4 Class</a></li>
+                        <li><a href="SSD W5 Class.html">SSD Week 5 Class</a></li>
+                        <li><a href="SSD W6 Class.html">SSD Week 6 Class</a></li>
+                        </br>
+                        <li><a href="SSD Halfway.html">SSD Halfway Dance</a></li>
+                        </br>
+                        <li><a href="SSD W7 Class.html">SSD Week 7 Class</a></li>
+                        <li><a href="SSD W9 Class.html">SSD Week 9 Class</a></li>
+                        <li><a href="SSD W10 Class.html">SSD Week 10 Class</a></li>
+                        <li><a href="SSD W12 Class.html">SSD Week 12 Class</a></li>
+                    </ul>
+                    </div>
+                    <!-- <div class="data-box" style="border-top-color: var(--lcars-blue);">
+                        <h4>Media Overlay</h4>
+                        <p>Streaming Protocols: <span class="status-active">Ready</span><br>Audio/Video Buffers: Online</p>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- PLUS PANEL -->
+            <section class="lcars-section advanced" id="section3">
+                <div class="section-header">
+                    <span class="header-title">PLUS // PLUS 2026</span>
+                    <div class="header-line"></div>
+                </div>
+                <div class="data-grid" id="plusList">
+                    <div class="data-box" style="border-top-color: var(--lcars-three);">
+                        <a href="PLUS BLAST CLASS.html"><h4>PLUS BLAST CLASS 1</h4></a>
+                    <a href="PLUS BLAST CLASS 2.html"><h4>PLUS BLAST CLASS 2</h4></a>
+                    <ul>
+                        <li><a href="PS Easy Tip.html">PLUS EASY TIP</a></li>
+                        <li><a href="DB PS BLAST REVIEW DANCES.html">BLAST DANCE REVIEWS</a></li>
+                        <li><a href="DB PLUS DANCES-1.html">PLUS DANCES</a></li>
+                        <li><a href="DB REVIEW TOPS.html">TOP REVIEW</a></li>
+                        </br>
+                        <li><a href="DB ACEY-DEUCEY.html">ACEY-DEUCEY</a></li>
+                        <li><a href="DB CHASE RIGHT.html">CHASE RIGHT </a></li>
+                        <li><a href="DB COORDINATE.html">COORDINATE </a></li>
+                        <li><a href="DB CROSSFIRE.html">CROSSFIRE </a></li>
+                        <li><a href="DB DIAMOND CIRC.html">DIAMOND CIRCULATE</a></li>
+                        <li><a href="DB DIAMOND.html">DIAMOND </a></li>
+                        <li><a href="Diamonds 2.html">DIAMOND 2 </a></li>
+                        <li><a href="DB DIXIE-GRAND.html">DIXIE-GRAND </a></li>
+                        <li><a href="DB EXPLODE-THE-WAVE.html">EXPLODE-THE-WAVE </a></li>
+                        <li><a href="DB FAN-THE-TOP.html">FAN-THE-TOP </a></li>
+                        <li><a href="FAN AND PEEL THE TOP.html">FAN & PEEL THE TOP </a></li>
+                        <li><a href="FAN AND PEEL.html">FAN AND PEEL THE TOP 2 </a></li>
+                        <li><a href="DB FOLLOW-YOUR-NEIGHBOR.html">FOLLOW YOUR NEIGHBOR</a></li>
+                        <li><a href="Grand Swing Thru.html">GRAND SWING THRU </a></li>
+                        <li><a href="DB LINEAR-CYCLE.html">LINEAR-CYCLE </a></li>
+                        <li><a href="DB LOAD-THE-BOAT.html">LOAD-THE-BOAT </a></li>
+                        <li><a href="DB PEEL-OFF.html">PEEL-OFF </a></li>
+                        <li><a href="DB PEEL-THE-TOP.html">PEEL-THE-TOP </a></li>
+                        <li><a href="DB PING-PONG.html">PING-PONG </a></li>
+                        <li><a href="DB RELAY-THE-DEUCEY.html">RELAY-THE-DEUCEY </a></li>
+                        <li><a href="DB ROLL.html">ROLL </a></li>
+                        <li><a href="DB SPIN-CHAIN-AND-EXCHANGE-THE-GEARS.html">SPIN-CHAIN-AND-EXCHANGE-THE-GEARS </a></li>
+                        <li><a href="DB SPIN-CHAIN-THE-GEARS.html">SPIN-CHAIN-THE-GEARS </a></li>
+                        <li><a href="DB SPREAD.html">SPREAD</a></li>
+                        <li><a href="DB TRACK-2.html">TRACK-2</a></li>
+                        <li><a href="DB TRADE-THE-WAVE.html">TRADE-THE-WAVE </a></li>
+                        <li><a href="DB TRIPLE-SCOOT.html">TRIPLE-SCOOT </a></li>
+                        </br>
+                        <li><strong>MOVE-A-MONTH</strong></li>
+                        <li><a href="OVER AND BACK.html">OVER AND BACKS </a></li>
+                        <li><a href="Pair Off.html">Pair Off </a></li>
+                        <li><a href="Quarter Thru.html">Quarter Thru </a></li>
+                        <li><a href="Three Quarter Thru.html">Three Quarter Thru </a></li>
+                        <li><a href="PS CLOVER AND ANY.html">Clover & anything </a></li>
+                        <li><a href="TRIPLE TRADE.html">TRIPLE TRADE </a></li>
+                        <li><a href="DIXIE-GRAND.html">DIXIE GRAND </a></li>
+                        <li><a href="DB SCOOT-HINGE.html">SCOOT & DODGE / PARTNER HINGE </a></li>
+                        <li><a href="DB PASS-THE-SEA.html">PASS THE SEA / PARTNER HINGE / PARTNER TAG</a></li>
+
+
+                    </ul>
+                    </div>
+                    <!-- <div class="data-box" style="border-top-color: var(--lcars-one);">
+                        <h4>Kernel Telemetry</h4>
+                        <p>API Access Codes: <span class="status-standby">Encrypted</span><br>Custom Hooks: Listening</p>
+                    </div> -->
+                </div>
+            </section>
+<!-- PLUS PANEL -->
+            <section class="lcars-section advanced" id="section4">
+                <div class="section-header">
+                    <span class="header-title">PLUS // PLUS 2026</span>
+                    <div class="header-line"></div>
+                </div>
+                <div class="data-grid" id="blastList">
+                    <div class="data-box" style="border-top-color: var(--lcars-blue); text-align: right;">
+                        <h4>PLUS MOVES</h4>
+                        <a href="DB SSD DANCES.html">SSD DANCES</a></br>
+                        <a href="DB ACEY-DEUCEY.html">ACEY-DEUCEY</a></br>
+                        </br>
+                        <a href="DB LINEAR-CYCLE.html">LINEAR-CYCLE </a></br>
+                        <a href="DB PING-PONG.html">PING-PONG </a></br>
+                        <a href="DB TRACK-2.html">TRACK-2</a></br>
+                        <a href="DB PS BLAST REVIEW DANCES.html">REVIEW 1</a></br>
+                        </br>
+                        <a href="DB TRADE-THE-WAVE.html">TRADE-THE-WAVE </a></br>
+                        <a href="DB EXPLODE-THE-WAVE.html">EXPLODE-THE-WAVE </a></br>
+                        <a href="DB FOLLOW-YOUR-NEIGHBOR.html">FOLLOW YOUR NEIGHBOR</a></br>
+                        <a href="DB PS BLAST REVIEW DANCES.html">REVIEW 2</a></br>
+                        </br>
+                        <a href="DB DIAMOND CIRC.html">DIAMOND CIRCULATE</a></br>
+                        <a href="DB DIAMOND CIRC.html">FLIP THE DIAMOND</a></br>
+                        <a href="DB DIAMOND CIRC.html">CUT THE DIAMOND</a></br>
+                        <a href="DB PS BLAST REVIEW DANCES.html">REVIEW 3</a></br>
+                        </br>
+                        <a href="DB CROSSFIRE.html">CROSSFIRE </a></br>
+                        <a href="DB COORDINATE.html">COORDINATE </a></br>
+                        <a href="DB SPIN-CHAIN-AND-EXCHANGE-THE-GEARS.html">SPIN-CHAIN-&-EXCHANGE</a></br>
+                        <a href="DB PS BLAST REVIEW DANCES.html">REVIEW 4</a></br>
+                        </br>
+                        
+                    </div>
+                    <div class="data-box" style="border-top-color: var(--lcars-blue);">
+                        <h4>SINGING CALL</h4>
+                        <a href="sing/BS 2627 - IT'S SO NICE TO BE WITH YOU - MS.html">IT'S SO NICE TO BE WITH YOU - MS</a></br>
+                        <a href="sing/RR 0305 - KING OF THE ROAD - PS.html">KING OF THE ROAD - PS</a></br>
+                        </br>
+                        <a href="sing/RR 0291 - SLOOP JOHN B - PS.html">SLOOP JOHN B - PS</a></br>
+                        <a href="sing/RR 0196 - MOUNTAIN MUSIC - PS.html">MOUNTAIN MUSIC - PS</a></br>
+                        <a href="sing/ARROW 1161 - TAKE IT EASY - PS.html">TAKE IT EASY - PS</a></br>
+                        <a href="sing/RWH 1241 - COUNTRY ROADS - PS.html">COUNTRY ROADS - PS</a></br>
+                        </br>
+                        <a href="sing/BS 2561 - CAN'T TAKE MY EYES OFF YOU - PS.html">CAN'T TAKE MY EYES OFF YOU - PS</a></br>
+                        <a href="sing/RYL 0335 - HEY BABY - PS.html">HEY BABY - PS</a></br>
+                        <a href="sing/BS 2595 - HALLELUJAH - PS.html">HALLELUJAH - PS</a></br>
+                        <a href="sing/RR 0288 - DON'T THINK TWICE - PS.html">DON'T THINK TWICE - PS</a></br>
+                        </br>
+                        <a href="sing/RWH 1154 - ROCKY TOP - PS.html">ROCKY TOP - PS</a></br>
+                        <a href="sing/NB 0412 - ONE CALL AWAY - PS.html">ONE CALL AWAY - PS</a></br>
+                        <a href="sing/HH 5368 - RAMBLIN' MAN - PS.html">RAMBLIN' MAN - PS</a></br>
+                        <a href="sing/CHIC 1092 - ILL NEVER FIND ANOTHER YOU - PS.html">ILL NEVER FIND ANOTHER YOU - PS</a></br>
+                        </br>
+                        <a href="sing/RR 0247 - JOY TO THE WORLD - PS.html">JOY TO THE WORLD - PS</a></br>
+                        <a href="sing/LS 0605 - WAGON WHEEL - PS.html">WAGON WHEEL - PS</a></br>
+                        <a href="sing/RYL 0325 - AMERICAN PIE - PS.html">AMERICAN PIE - PS</a></br>
+                        <a href="sing/CHIC 1074 - THERE'S A GREAT BIG BEAUTIFUL TOMORROW - PS.html">THERE'S A GREAT BIG BEAUTIFUL TOMORROW - PS</a></br>
+                        </br>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

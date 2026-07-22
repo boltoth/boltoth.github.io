@@ -246,6 +246,8 @@
         function toggleDiv(a) {
             var x = document.getElementById(a);
             toggleDivOffAll();
+
+            setCookie("section", a, 20)
             
             if (x.style.display === "none") {
                 x.style.display = "grid";
@@ -265,6 +267,26 @@
             toggleDivOff('plusList');
             toggleDivOff('blastList');
         }
+        function setCookie(cname, cvalue, exmin) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exmin * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            // document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            document.cookie = cname + "=" + cvalue + ";" + expires;
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                c = c.trim();
+                if (c.indexOf(name) != 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
     </script>
 </head>
 <body>
@@ -273,6 +295,9 @@
         // This functions as your "on start up" routine
         document.addEventListener("DOMContentLoaded", () => {
             toggleDivOffAll();
+
+            let section = getCookie("section");
+            toggleDiv(section);
         });
     </script>
 
@@ -445,7 +470,7 @@
 <!-- PLUS PANEL -->
             <section class="lcars-section advanced" id="section4">
                 <div class="section-header">
-                    <span class="header-title">PLUS // PLUS 2026</span>
+                    <span class="header-title">PLUS BLAST</span>
                     <div class="header-line"></div>
                 </div>
                 <div class="data-grid" id="blastList">
